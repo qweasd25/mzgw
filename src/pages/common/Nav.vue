@@ -146,7 +146,6 @@ export default {
     width: 100%;
     height: 38px;
     background-color: #718cf1;
-    position: absolute;
     .nav-center {
       width: 44.8%;
       min-width: 860px;
