@@ -154,7 +154,6 @@ export default {
         width: 90px;
         height: 38px;
         float: left;
-        z-index: 1;
         margin-left: 20px;
         text-align: center;
         &:first-child {

@@ -2,7 +2,7 @@
   <div id="banner">
     <swiper :options="swiperOption" ref="mySwiper">
       <!-- slides -->
-      <swiper-slide v-for="slide in swiperSlides" :key="slide.id">
+      <swiper-slide v-for="(slide,index) in swiperSlides" :key="index">
         <img :src="slide.imgUrl" alt="">
       </swiper-slide>
       <!-- Optional controls -->
@@ -15,10 +15,11 @@
 </template>
 
 <script>
+import 'swiper/dist/css/swiper.css';
 import { swiper, swiperSlide } from 'vue-awesome-swiper';
 import banner from './../../../assets/images/index/banner.png';
-import bannerTwo from './../../../assets/images/index/banner02.png';
-import bannerThree from './../../../assets/images/index/banner03.png';
+import bannerTwo from './../../../assets/images/index/bannerTwo.png';
+import bannerThree from './../../../assets/images/index/bannerThree.png';
 
 export default {
   name: 'HomeSwiper',
@@ -42,7 +43,7 @@ export default {
           disableOnInteraction: true
         },
         // 设置轮播
-        effect: 'flip',
+        effect: 'fade',
         // 滑动速度
         speed: 800,
         // 滑动方向
@@ -77,16 +78,16 @@ export default {
 </script>
 
 <style lang="scss">
-  @import 'swiper/dist/css/swiper.css';
   #banner{
     width: 100%;
     height: 500px;
+    z-index: 1;
+    .swiper-container{
+      z-index: -1;
+    }
     .swiper-slide{
       width: 100%;
       height: 500px;
-      // background-repeat: no-repeat;
-      // background-size: 1920px 500px;
-      // background-position: center center;
       img {
         width: 1920px;
         height: 500px;
