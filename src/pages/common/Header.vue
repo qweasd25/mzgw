@@ -1,7 +1,7 @@
 <template>
   <header>
     <div>
-      <img src="./../../assets/images/index/logo1.png" alt="美中矿业集团">
+      <img src="static/images/index/logo1.png" alt="美中矿业集团">
     </div>
     <div>
       <form action="/search" class="header-search">
@@ -65,7 +65,7 @@ export default {
               display: inline-block;
               width: 16px;
               height: 14px;
-              background: url('./../../assets/images/index/searchIcon.png') no-repeat center center;
+              background: url('~/static/images/index/searchIcon.png') no-repeat center center;
             }
           }
           #searchBox{

@@ -177,6 +177,8 @@ export default {
           overflow: hidden;
           opacity: 0;
           transition: opacity .8s ease-in-out;
+          position: relative;
+          z-index: 6;
           .header-uploadpop-item a{
             display: block;
             width: 90px;
