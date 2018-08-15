@@ -4,6 +4,8 @@
     <common-nav></common-nav>
     <banner-swiper></banner-swiper>
     <news></news>
+    <home-product></home-product>
+    <home-product-case></home-product-case>
   </div>
 </template>
 
@@ -12,13 +14,17 @@ import CommonHeader from './../common/Header';
 import CommonNav from './../common/Nav';
 import BannerSwiper from './component/bannerSwiper';
 import News from './component/news';
+import HomeProduct from './component/product';
+import homeProductCase from './component/productCase';
 export default {
   name: 'mzIndex',
   components: {
     CommonHeader,
     CommonNav,
     BannerSwiper,
-    News
+    News,
+    HomeProduct,
+    homeProductCase
   }
 };
 </script>
