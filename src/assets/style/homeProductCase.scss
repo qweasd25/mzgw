@@ -1,7 +1,7 @@
 .home-case {
   min-width: 1200px;
   width: 62.5%;
-  height: 1002px;
+  height: 1231px;
   margin: 0 auto;
   .title{
     margin-top: 60px;
@@ -9,10 +9,78 @@
   .accordion {
     width: 1200px;
     height: 370px;
+    overflow: hidden;
+    &:hover li{
+      width: 100px;
+    }
+    li {
+      width: 200px;
+      height: 370px;
+      float: left;
+      transition: all 1s;
+      &:hover {
+        width: 700px;
+        span {
+          opacity: 1;
+          transition: all 2s;
+        }
+      }
+      a {
+        display: block;
+        height: 370px;
+        position: relative;
+        img {
+          display: block;
+          width: 700px;
+          height: 370px;
+          cursor: pointer;
+        }
+        span {
+          position: absolute;
+          opacity: 0;
+          bottom: 10px;
+          left: 15px;
+          font-size: 24px;
+          font-family: 'Microsoft Yahei Light Regular';
+          color: #fff;
+        }
+      } 
+    }
   }
-  .photo-wall{
+  .photo-wall {
    width: 1184px;
-   height: 592px;
-   margin: 0 auto;
+   height: 642px;
+   margin: 0 auto 90px;
+   overflow: hidden;
+   .wall-cell {
+    float: left;
+    margin: 40px 16px 0 0;
+    width: 382px;
+    height: 274px;
+    border: 1px solid #ddd;
+    text-align: center;
+    &:nth-child(3),&:last-child {
+      margin-right: 0px
+    }
+    a {
+      display: block;
+      img {
+        display: block;
+        width: 352px;
+        height: 220px;
+        margin: 16px auto 10px;
+      }
+      span {
+        display: block;
+        color: #5a5a5a;
+        font-size: 14px;
+      }
+    }
+    &:hover {
+      border-color: #3667d2;
+      box-shadow: 0 5px 8px rgba(10,16,20,.24),0 0 8px rgba(10,16,20,.12);
+      text-decoration: none;
+    }
+   }
   }
 }

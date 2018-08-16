@@ -6,6 +6,7 @@
     <news></news>
     <home-product></home-product>
     <home-product-case></home-product-case>
+    <common-footer></common-footer>
   </div>
 </template>
 
@@ -16,6 +17,7 @@ import BannerSwiper from './component/bannerSwiper';
 import News from './component/news';
 import HomeProduct from './component/product';
 import homeProductCase from './component/productCase';
+import CommonFooter from './../common/Footer';
 export default {
   name: 'mzIndex',
   components: {
@@ -24,7 +26,8 @@ export default {
     BannerSwiper,
     News,
     HomeProduct,
-    homeProductCase
+    homeProductCase,
+    CommonFooter
   }
 };
 </script>
