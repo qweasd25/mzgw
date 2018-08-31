@@ -1,0 +1,74 @@
+.member-tab {
+  margin: 0 auto;
+  width: 160px;
+  height: 36px;
+  .tab {
+    display: inline-block;
+    padding: 5px 20px;
+    border: 1px solid #7c97ff;
+    background: #7c97ff;
+    color: #ffffff;
+    transform: skew(-20deg);
+    margin-right: -5px;
+    *margin-right: 0;
+    &.active {
+      background: #ffffff;
+      color: #7c97ff;
+    }
+    div {
+      transform: skew(20deg);
+    }
+ }
+}
+.about-member {
+  width: 900px;
+  li {
+    margin-top: 30px;
+    height: 200px;
+    .imgLeft {
+      float: left;
+      width: 300px;    
+      img {
+        width: 300px;
+        height: 200px;
+      }
+    }
+    .contentRight {
+      float: right;
+      width: 558px;
+      height: 200px;
+      h3 {
+        font-size: 18px;
+        color: #333333;
+        font-weight: bold;
+        line-height: 40px;
+      }
+      div {
+        height: 66px;
+        width: 558px;
+        font-size: 14px;
+        line-height: 22px;
+        color: #555555;
+        word-wrap:break-word;
+        word-break:break-all;
+        overflow: hidden;
+      }
+      p {
+        font-size: 14px;
+        color: #555555;
+        line-height: 22px;
+      }
+    }
+    &:after {
+      visibility: hidden;
+      display: inline-block;
+      content: "";
+      height: 0;
+      clear: both;
+      zoom: 1;
+    }
+  }
+}
+.abroad {
+  display: none;
+}

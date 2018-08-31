@@ -1,0 +1,42 @@
+.main {
+  width: 1200px;
+  min-height: 460px;
+  overflow: hidden;
+  margin: 0 auto;
+  .left-nav {
+    float: left;
+  }
+  .right-content {
+    float: right;
+    width: 900px;
+    min-height: 460px;
+    overflow: hidden;
+    .top-adress {
+      text-align: right;
+      height: 50px;
+      font-size: 14px;
+      color: #999999;
+      line-height: 25px;
+      padding-top: 25px;
+      a {
+        font-size: 14px;
+        color: #999999;
+        line-height: 25px;
+      }
+    }
+    .right-title {
+      text-align: center;
+      font-size: 26px;
+      color: #666666;
+      margin: 28px 0;
+    }
+  }
+  &:after {
+    visibility: hidden;
+    display: inline-block;
+    content: "";
+    height: 0;
+    clear: both;
+    zoom: 1;
+  }
+}

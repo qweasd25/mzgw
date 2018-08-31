@@ -7,7 +7,7 @@
     <ul class="product-list">
       <li v-for="(list,index) in productList" :key="index">
         <div class="product-image">
-          <img :src="'static/images/index/product'+list.imgUrl+'.png'" alt="">
+          <img :src="'static/images/index/product'+list.imgUrl+'.png'">
         </div>
         <div class="product-classify">{{list.imgName}}</div>
       </li>

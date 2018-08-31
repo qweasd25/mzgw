@@ -2,126 +2,126 @@
 <nav>
   <div class="nav-center">
     <div class="mz-nav">
-      <div class="nav-header active">
-        <a href="#">首 页</a>
+      <div class="nav-header">
+        <router-link to="/index.html">首 页</router-link>
       </div>
     </div>
     <div class="mz-nav">
       <div class="nav-header">
-        <a href="#">关于美中</a>
+        <router-link to="/about.html">关于美中</router-link>
       </div>
       <ul id="nav_uploadMenu" class="header-uploadpop">
         <li class="header-uploadpop-item">
-          <a href="#">集团简介</a>
+          <router-link to="/about.html">集团简介</router-link>
         </li>
         <li class="header-uploadpop-item">
-          <a href="#">集团成员</a>
+          <router-link to="/about/groupMenber.html">集团成员</router-link>
         </li>
         <li class="header-uploadpop-item">
-          <a href="#">企业文化</a>
+          <router-link to="/about/culture.html">企业文化</router-link>
         </li>
         <li class="header-uploadpop-item">
-          <a href="#">发展历程</a>
+          <router-link to="/about/developHistory.html">发展历程</router-link>
         </li>
         <li class="header-uploadpop-item">
-          <a href="#">战略合作</a>
+          <router-link to="/about/cooperation.html">战略合作</router-link>
         </li>
       </ul>
     </div>
     <div class="mz-nav">
       <div class="nav-header">
-        <a href="#">资讯中心</a>
+        <router-link to="">资讯中心</router-link>
       </div>
       <ul id="nav_uploadMenu" class="header-uploadpop">
         <li class="header-uploadpop-item">
-          <a href="#">企业动态</a>
+          <router-link to="">企业动态</router-link>
         </li>
         <li class="header-uploadpop-item">
-          <a href="#">行业资讯</a>
+          <router-link to="">行业资讯</router-link>
         </li>
         <li class="header-uploadpop-item">
-          <a href="#">美中风采</a>
+          <router-link to="">美中风采</router-link>
         </li>
       </ul>
     </div>
     <div class="mz-nav">
       <div class="nav-header">
-        <a href="#">产品中心</a>
+        <router-link to="">产品中心</router-link>
       </div>
       <ul id="nav_uploadMenu" class="header-uploadpop">
         <li class="header-uploadpop-item">
-          <a href="#">石木风情</a>
+          <router-link to="">石木风情</router-link>
         </li>
         <li class="header-uploadpop-item">
-          <a href="#">异形</a>
+          <router-link to="">异形</router-link>
         </li>
         <li class="header-uploadpop-item">
-          <a href="#">高强板</a>
+          <router-link to="">高强板</router-link>
         </li>
         <li class="header-uploadpop-item">
-          <a href="#">马赛克</a>
+          <router-link to="">马赛克</router-link>
         </li>
         <li class="header-uploadpop-item">
-          <a href="#">艺术拼图</a>
+          <router-link to="">艺术拼图</router-link>
         </li>
         <li class="header-uploadpop-item">
-          <a href="#">壁炉</a>
+          <router-link to="">壁炉</router-link>
         </li>
         <li class="header-uploadpop-item">
-          <a href="#">蒂诺</a>
+          <router-link to="">蒂诺</router-link>
         </li>
       </ul>
     </div>
     <div class="mz-nav">
       <div class="nav-header">
-        <a href="#">材料中心</a>
+        <router-link to="">材料中心</router-link>
       </div>
     </div>
     <div class="mz-nav">
       <div class="nav-header">
-        <a href="#">矿山资源</a>
+        <router-link to="">矿山资源</router-link>
       </div>
       <ul id="nav_uploadMenu" class="header-uploadpop">
         <li class="header-uploadpop-item">
-          <a href="#">国内矿山</a>
+          <router-link to="">国内矿山</router-link>
         </li>
         <li class="header-uploadpop-item">
-          <a href="#">国外矿山</a>
+          <router-link to="">国外矿山</router-link>
         </li>
       </ul>
     </div>
     <div class="mz-nav">
       <div class="nav-header">
-        <a href="#">工程案例</a>
+        <router-link to="">工程案例</router-link>
       </div>
       <ul id="nav_uploadMenu" class="header-uploadpop">
         <li class="header-uploadpop-item">
-          <a href="#">美中案例</a>
+          <router-link to="">美中案例</router-link>
         </li>
         <li class="header-uploadpop-item">
-          <a href="#">案例名录</a>
+          <router-link to="">案例名录</router-link>
         </li>
       </ul>
     </div>
     <div class="mz-nav">
       <div class="nav-header">
-        <a href="#">联系我们</a>
+        <router-link to="">联系我们</router-link>
       </div>
       <ul id="nav_uploadMenu" class="header-uploadpop">
         <li class="header-uploadpop-item">
-          <a href="#">全球网点</a>
+          <router-link to="">全球网点</router-link>
         </li>
         <li class="header-uploadpop-item">
-          <a href="#">加工基地</a>
+          <router-link to="">加工基地</router-link>
         </li>
         <li class="header-uploadpop-item">
-          <a href="#">采购平台</a>
+          <router-link to="">采购平台</router-link>
         </li>
         <li class="header-uploadpop-item">
-          <a href="#">人才招聘</a>
+          <router-link to="">人才招聘</router-link>
         </li>
         <li class="header-uploadpop-item">
-          <a href="#">直营网点</a>
+          <router-link to="">直营网点</router-link>
         </li>
       </ul>
     </div>
@@ -160,7 +160,7 @@ export default {
           margin-left: 0;
         }
         .nav-header {
-          &.active {
+          .router-link-active {
             height: 36px;
             border-bottom: 2px solid #ffffff;
           }

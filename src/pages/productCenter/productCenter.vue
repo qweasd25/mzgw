@@ -1,10 +1,19 @@
-<template>
+  <template>
+  </template>
   
-</template>
-
-<script>
-import './../../../assets/style/productCenter.scss';
-export default {
+  <script type="text/ecmascript-6">
+  export default {
+    data() {
+      return {
   
-};
-</script>
+      };
+    },
+    components: {
+  
+    }
+  };
+  </script>
+  
+  <style lang="scss">
+  </style>
+  
