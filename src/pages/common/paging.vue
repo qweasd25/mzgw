@@ -71,6 +71,7 @@ export default {
   watch: {
     cur: function (oldValue, newValue) {
       console.log(arguments);
+      this.$emit('change', arguments[0]);
     }
   }
 };

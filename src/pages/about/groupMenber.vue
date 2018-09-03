@@ -24,7 +24,7 @@
             </div>
           </div>
           <ul class="about-member domestic">
-            <li v-for="item in groupInMenber" :key="item.id">
+            <li v-for="item in inMenber" :key="item.id">
               <div class="imgLeft">
                 <img :src="'./../../../static/images/about/example'+item.imgUrl+'.png'">
               </div>
@@ -39,7 +39,7 @@
             </li>
           </ul>
           <ul class="about-member abroad">
-            <li v-for="item in groupOutMenber" :key="item.id">
+            <li v-for="item in outMenber" :key="item.id">
               <div class="imgLeft">
                 <img :src="'./../../../static/images/about/example'+item.imgUrl+'.png'">
               </div>
@@ -53,7 +53,7 @@
               </div>
             </li>
           </ul>
-          <common-paging :all="count">></common-paging>
+          <common-paging :all="count" @change="handleChange"></common-paging>
         </div>
       </div>
     </div>
@@ -83,62 +83,90 @@ export default {
   data () {
     return {
       groupInMenber: [
-        {imgUrl: '1', title: '高时（厦门）石业有限公司', content: 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX', adress: 'XXXXXXXXXX', tel: '(86)0592-72222222', cz: '(86)0592-72222222', mail: 'XXX@XXX.com'},
-        {imgUrl: '1', title: '高时（厦门）石业有限公司', content: 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX', adress: 'XXXXXXXXXX', tel: '(86)0592-72222222', cz: '(86)0592-72222222', mail: 'XXX@XXX.com'},
-        {imgUrl: '1', title: '高时（厦门）石业有限公司', content: 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX', adress: 'XXXXXXXXXX', tel: '(86)0592-72222222', cz: '(86)0592-72222222', mail: 'XXX@XXX.com'},
-        {imgUrl: '1', title: '高时（厦门）石业有限公司', content: 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX', adress: 'XXXXXXXXXX', tel: '(86)0592-72222222', cz: '(86)0592-72222222', mail: 'XXX@XXX.com'},
-        {imgUrl: '1', title: '高时（厦门）石业有限公司', content: 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX', adress: 'XXXXXXXXXX', tel: '(86)0592-72222222', cz: '(86)0592-72222222', mail: 'XXX@XXX.com'},
-        {imgUrl: '1', title: '高时（厦门）石业有限公司', content: 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX', adress: 'XXXXXXXXXX', tel: '(86)0592-72222222', cz: '(86)0592-72222222', mail: 'XXX@XXX.com'},
-        {imgUrl: '1', title: '高时（厦门）石业有限公司', content: 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX', adress: 'XXXXXXXXXX', tel: '(86)0592-72222222', cz: '(86)0592-72222222', mail: 'XXX@XXX.com'},
-        {imgUrl: '1', title: '高时（厦门）石业有限公司', content: 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX', adress: 'XXXXXXXXXX', tel: '(86)0592-72222222', cz: '(86)0592-72222222', mail: 'XXX@XXX.com'},
-        {imgUrl: '1', title: '高时（厦门）石业有限公司', content: 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX', adress: 'XXXXXXXXXX', tel: '(86)0592-72222222', cz: '(86)0592-72222222', mail: 'XXX@XXX.com'},
-        {imgUrl: '1', title: '高时（厦门）石业有限公司', content: 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX', adress: 'XXXXXXXXXX', tel: '(86)0592-72222222', cz: '(86)0592-72222222', mail: 'XXX@XXX.com'},
-        {imgUrl: '1', title: '高时（厦门）石业有限公司', content: 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX', adress: 'XXXXXXXXXX', tel: '(86)0592-72222222', cz: '(86)0592-72222222', mail: 'XXX@XXX.com'},
-        {imgUrl: '1', title: '高时（厦门）石业有限公司', content: 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX', adress: 'XXXXXXXXXX', tel: '(86)0592-72222222', cz: '(86)0592-72222222', mail: 'XXX@XXX.com'},
-        {imgUrl: '1', title: '高时（厦门）石业有限公司', content: 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX', adress: 'XXXXXXXXXX', tel: '(86)0592-72222222', cz: '(86)0592-72222222', mail: 'XXX@XXX.com'},
-        {imgUrl: '1', title: '高时（厦门）石业有限公司', content: 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX', adress: 'XXXXXXXXXX', tel: '(86)0592-72222222', cz: '(86)0592-72222222', mail: 'XXX@XXX.com'},
-        {imgUrl: '1', title: '高时（厦门）石业有限公司', content: 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX', adress: 'XXXXXXXXXX', tel: '(86)0592-72222222', cz: '(86)0592-72222222', mail: 'XXX@XXX.com'},
-        {imgUrl: '1', title: '高时（厦门）石业有限公司', content: 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX', adress: 'XXXXXXXXXX', tel: '(86)0592-72222222', cz: '(86)0592-72222222', mail: 'XXX@XXX.com'}
+        {imgUrl: '1', title: '高时（厦门）石业有限公司', content: '国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内', adress: 'XXXXXXXXXX', tel: '(86)0592-72222222', cz: '(86)0592-72222222', mail: 'XXX@XXX.com'},
+        {imgUrl: '1', title: '高时（厦门）石业有限公司', content: '国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内', adress: 'XXXXXXXXXX', tel: '(86)0592-72222222', cz: '(86)0592-72222222', mail: 'XXX@XXX.com'},
+        {imgUrl: '1', title: '高时（厦门）石业有限公司', content: '国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内', adress: 'XXXXXXXXXX', tel: '(86)0592-72222222', cz: '(86)0592-72222222', mail: 'XXX@XXX.com'},
+        {imgUrl: '1', title: '高时（厦门）石业有限公司', content: '国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内', adress: 'XXXXXXXXXX', tel: '(86)0592-72222222', cz: '(86)0592-72222222', mail: 'XXX@XXX.com'},
+        {imgUrl: '1', title: '高时（厦门）石业有限公司', content: '国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内', adress: 'XXXXXXXXXX', tel: '(86)0592-72222222', cz: '(86)0592-72222222', mail: 'XXX@XXX.com'},
+        {imgUrl: '1', title: '高时（厦门）石业有限公司', content: '国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内', adress: 'XXXXXXXXXX', tel: '(86)0592-72222222', cz: '(86)0592-72222222', mail: 'XXX@XXX.com'},
+        {imgUrl: '1', title: '高时（厦门）石业有限公司', content: '国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内', adress: 'XXXXXXXXXX', tel: '(86)0592-72222222', cz: '(86)0592-72222222', mail: 'XXX@XXX.com'},
+        {imgUrl: '1', title: '高时（厦门）石业有限公司', content: '国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内', adress: 'XXXXXXXXXX', tel: '(86)0592-72222222', cz: '(86)0592-72222222', mail: 'XXX@XXX.com'},
+        {imgUrl: '1', title: '高时（厦门）石业有限公司', content: '国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内', adress: 'XXXXXXXXXX', tel: '(86)0592-72222222', cz: '(86)0592-72222222', mail: 'XXX@XXX.com'},
+        {imgUrl: '1', title: '高时（厦门）石业有限公司', content: '国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内', adress: 'XXXXXXXXXX', tel: '(86)0592-72222222', cz: '(86)0592-72222222', mail: 'XXX@XXX.com'},
+        {imgUrl: '1', title: '高时（厦门）石业有限公司', content: '国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内', adress: 'XXXXXXXXXX', tel: '(86)0592-72222222', cz: '(86)0592-72222222', mail: 'XXX@XXX.com'},
+        {imgUrl: '1', title: '高时（厦门）石业有限公司', content: '国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内', adress: 'XXXXXXXXXX', tel: '(86)0592-72222222', cz: '(86)0592-72222222', mail: 'XXX@XXX.com'},
+        {imgUrl: '1', title: '高时（厦门）石业有限公司', content: '国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内', adress: 'XXXXXXXXXX', tel: '(86)0592-72222222', cz: '(86)0592-72222222', mail: 'XXX@XXX.com'},
+        {imgUrl: '1', title: '高时（厦门）石业有限公司', content: '国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内', adress: 'XXXXXXXXXX', tel: '(86)0592-72222222', cz: '(86)0592-72222222', mail: 'XXX@XXX.com'},
+        {imgUrl: '1', title: '高时（厦门）石业有限公司', content: '国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内', adress: 'XXXXXXXXXX', tel: '(86)0592-72222222', cz: '(86)0592-72222222', mail: 'XXX@XXX.com'},
+        {imgUrl: '1', title: '高时（厦门）石业有限公司', content: '国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内国内', adress: 'XXXXXXXXXX', tel: '(86)0592-72222222', cz: '(86)0592-72222222', mail: 'XXX@XXX.com'}
       ],
       groupOutMenber: [
-        {imgUrl: '1', title: '高时（厦门）石业有限公司', content: '（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）', adress: 'XXXXXXXXXX', tel: '(86)0592-72222222', cz: '(86)0592-72222222', mail: 'XXX@XXX.com'},
-        {imgUrl: '1', title: '高时（厦门）石业有限公司', content: '（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）', adress: 'XXXXXXXXXX', tel: '(86)0592-72222222', cz: '(86)0592-72222222', mail: 'XXX@XXX.com'},
-        {imgUrl: '1', title: '高时（厦门）石业有限公司', content: '（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）', adress: 'XXXXXXXXXX', tel: '(86)0592-72222222', cz: '(86)0592-72222222', mail: 'XXX@XXX.com'},
-        {imgUrl: '1', title: '高时（厦门）石业有限公司', content: '（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）', adress: 'XXXXXXXXXX', tel: '(86)0592-72222222', cz: '(86)0592-72222222', mail: 'XXX@XXX.com'},
-        {imgUrl: '1', title: '高时（厦门）石业有限公司', content: '（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）', adress: 'XXXXXXXXXX', tel: '(86)0592-72222222', cz: '(86)0592-72222222', mail: 'XXX@XXX.com'},
-        {imgUrl: '1', title: '高时（厦门）石业有限公司', content: '（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）', adress: 'XXXXXXXXXX', tel: '(86)0592-72222222', cz: '(86)0592-72222222', mail: 'XXX@XXX.com'},
-        {imgUrl: '1', title: '高时（厦门）石业有限公司', content: '（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）', adress: 'XXXXXXXXXX', tel: '(86)0592-72222222', cz: '(86)0592-72222222', mail: 'XXX@XXX.com'},
-        {imgUrl: '1', title: '高时（厦门）石业有限公司', content: '（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）', adress: 'XXXXXXXXXX', tel: '(86)0592-72222222', cz: '(86)0592-72222222', mail: 'XXX@XXX.com'},
-        {imgUrl: '1', title: '高时（厦门）石业有限公司', content: '（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）', adress: 'XXXXXXXXXX', tel: '(86)0592-72222222', cz: '(86)0592-72222222', mail: 'XXX@XXX.com'},
-        {imgUrl: '1', title: '高时（厦门）石业有限公司', content: '（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）（厦门）', adress: 'XXXXXXXXXX', tel: '(86)0592-72222222', cz: '(86)0592-72222222', mail: 'XXX@XXX.com'}
+        {imgUrl: '1', title: '高时（厦门）石业有限公司', content: '国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外', adress: 'XXXXXXXXXX', tel: '(86)0592-72222222', cz: '(86)0592-72222222', mail: 'XXX@XXX.com'},
+        {imgUrl: '1', title: '高时（厦门）石业有限公司', content: '国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外', adress: 'XXXXXXXXXX', tel: '(86)0592-72222222', cz: '(86)0592-72222222', mail: 'XXX@XXX.com'},
+        {imgUrl: '1', title: '高时（厦门）石业有限公司', content: '国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外', adress: 'XXXXXXXXXX', tel: '(86)0592-72222222', cz: '(86)0592-72222222', mail: 'XXX@XXX.com'},
+        {imgUrl: '1', title: '高时（厦门）石业有限公司', content: '国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外', adress: 'XXXXXXXXXX', tel: '(86)0592-72222222', cz: '(86)0592-72222222', mail: 'XXX@XXX.com'},
+        {imgUrl: '1', title: '高时（厦门）石业有限公司', content: '国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外', adress: 'XXXXXXXXXX', tel: '(86)0592-72222222', cz: '(86)0592-72222222', mail: 'XXX@XXX.com'},
+        {imgUrl: '1', title: '高时（厦门）石业有限公司', content: '国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外', adress: 'XXXXXXXXXX', tel: '(86)0592-72222222', cz: '(86)0592-72222222', mail: 'XXX@XXX.com'},
+        {imgUrl: '1', title: '高时（厦门）石业有限公司', content: '国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外', adress: 'XXXXXXXXXX', tel: '(86)0592-72222222', cz: '(86)0592-72222222', mail: 'XXX@XXX.com'},
+        {imgUrl: '1', title: '高时（厦门）石业有限公司', content: '国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外', adress: 'XXXXXXXXXX', tel: '(86)0592-72222222', cz: '(86)0592-72222222', mail: 'XXX@XXX.com'},
+        {imgUrl: '1', title: '高时（厦门）石业有限公司', content: '国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外', adress: 'XXXXXXXXXX', tel: '(86)0592-72222222', cz: '(86)0592-72222222', mail: 'XXX@XXX.com'},
+        {imgUrl: '1', title: '高时（厦门）石业有限公司', content: '国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外国外', adress: 'XXXXXXXXXX', tel: '(86)0592-72222222', cz: '(86)0592-72222222', mail: 'XXX@XXX.com'}
       ],
-      count: 0
+      count: 0,
+      tab1: '',
+      tab2: '',
+      domestic: '',
+      abroad: '',
+      domesticLength: 0,
+      abroadLength: 0,
+      outMenber: [],
+      inMenber: []
     };
   },
   created () {
-    this.count = Math.ceil(this.groupInMenber.length / 5);
+    this.count = Math.ceil(this.groupInMenber.length / 5); // 总页数
+    this.inMenber = this.groupInMenber.slice(0, 5);
+    this.outMenber = this.groupOutMenber.slice(0, 5);
+  },
+  mounted () {
+    this.tab1 = document.getElementsByClassName('tab')[0];
+    this.tab2 = document.getElementsByClassName('tab')[1];
+    this.domestic = document.getElementsByClassName('domestic')[0];
+    this.abroad = document.getElementsByClassName('abroad')[0];
+    this.domesticLength = this.groupInMenber.length;
+    this.abroadLength = this.groupOutMenber.length;
+    console.log(this.domesticLength, this.abroadLength);
   },
   methods: {
     handleToggle: function () {
-      var tab1 = document.getElementsByClassName('tab')[0];
-      var tab2 = document.getElementsByClassName('tab')[1];
-      var domestic = document.getElementsByClassName('domestic')[0];
-      var abroad = document.getElementsByClassName('abroad')[0];
-      var domesticLength = this.groupInMenber.length;
-      var abroadLength = this.groupOutMenber.length;
-      console.log(domesticLength, abroadLength);
-      if (tab1.classList.contains('active') === true) {
-        tab1.classList.remove('active');
-        tab2.classList.add('active');
-        domestic.style.display = 'none';
-        abroad.style.display = 'block';
-        this.count = Math.ceil(abroadLength / 5);
+      if (this.tab1.classList.contains('active') === true) {
+        this.tab1.classList.remove('active');
+        this.tab2.classList.add('active');
+        this.domestic.style.display = 'none';
+        this.abroad.style.display = 'block';
+        this.count = Math.ceil(this.abroadLength / 5);
       } else {
-        tab2.classList.remove('active');
-        tab1.classList.add('active');
-        domestic.style.display = 'block';
-        abroad.style.display = 'none';
-        this.count = Math.ceil(domesticLength / 5);
+        this.tab2.classList.remove('active');
+        this.tab1.classList.add('active');
+        this.domestic.style.display = 'block';
+        this.abroad.style.display = 'none';
+        this.count = Math.ceil(this.domesticLength / 5);
+      }
+    },
+    handleChange: function (step) {
+      console.log(step);
+      let start = (step - 1) * 5;
+      let end = step * 5 - 1;
+      if (this.tab2.classList.contains('active') === true) {
+        end = end <= this.abroadLength ? end : this.abroadLength;
+        console.log(start, end);
+        this.outMenber = this.groupOutMenber.slice(start, end);
+        console.log(this.outMenber);
+      } else {
+        end = end <= this.domesticLength ? end : this.domesticLength;
+        console.log(start, end);
+        this.inMenber = this.groupInMenber.slice(start, end);
+        console.log(this.inMenber);
       }
     }
   }

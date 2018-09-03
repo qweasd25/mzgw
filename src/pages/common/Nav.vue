@@ -3,28 +3,28 @@
   <div class="nav-center">
     <div class="mz-nav">
       <div class="nav-header">
-        <router-link to="/index.html">首 页</router-link>
+        <router-link to="/index">首 页</router-link>
       </div>
     </div>
     <div class="mz-nav">
       <div class="nav-header">
-        <router-link to="/about.html">关于美中</router-link>
+        <router-link to="/about/about">关于美中</router-link>
       </div>
       <ul id="nav_uploadMenu" class="header-uploadpop">
         <li class="header-uploadpop-item">
-          <router-link to="/about.html">集团简介</router-link>
+          <router-link to="/about/about">集团简介</router-link>
         </li>
         <li class="header-uploadpop-item">
-          <router-link to="/about/groupMenber.html">集团成员</router-link>
+          <router-link to="/about/groupMenber">集团成员</router-link>
         </li>
         <li class="header-uploadpop-item">
-          <router-link to="/about/culture.html">企业文化</router-link>
+          <router-link to="/about/culture">企业文化</router-link>
         </li>
         <li class="header-uploadpop-item">
-          <router-link to="/about/developHistory.html">发展历程</router-link>
+          <router-link to="/about/developHistory">发展历程</router-link>
         </li>
         <li class="header-uploadpop-item">
-          <router-link to="/about/cooperation.html">战略合作</router-link>
+          <router-link to="/about/cooperation">战略合作</router-link>
         </li>
       </ul>
     </div>
