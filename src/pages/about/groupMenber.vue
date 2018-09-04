@@ -1,84 +1,68 @@
 <template>
-  <div>
-    <common-header></common-header>
-    <common-nav></common-nav>
-    <about-banner></about-banner>
-    <div class="main">
-      <left-nav></left-nav>
-      <div class="right-content">
-        <div class="top-adress">
-          <span>您现在的位置: </span>
-          <router-link to="/index.html">首页</router-link> >
-          <router-link to="/about.html">关于美中</router-link> >
-          <router-link to="/about/groupMenber.html">集团成员</router-link>
-          <router-view></router-view>
-        </div>
-        <div class="right-title">集团成员</div>
-        <div class="right-main">
-          <div class="member-tab">
-            <div class="tab active" @click="handleToggle">
-              <div>国内</div>
-            </div>
-            <div class="tab" @click="handleToggle">
-              <div>国外</div>
-            </div>
+  <div class="main">
+    <left-nav></left-nav>
+    <div class="right-content">
+      <div class="top-adress">
+        <span>您现在的位置: </span>
+        <router-link to="/index">首页</router-link> >
+        <router-link to="/about/about">关于美中</router-link> >
+        <router-link to="/about/groupMenber">集团成员</router-link>
+      </div>
+      <div class="right-title">集团成员</div>
+      <div class="right-main">
+        <div class="member-tab">
+          <div class="tab active" @click="handleToggle">
+            <div>国内</div>
           </div>
-          <ul class="about-member domestic">
-            <li v-for="item in inMenber" :key="item.id">
-              <div class="imgLeft">
-                <img :src="'./../../../static/images/about/example'+item.imgUrl+'.png'">
-              </div>
-              <div class="contentRight">
-                <h3>{{item.title}}</h3>
-                <div>{{item.content}}</div>
-                <p>地址：{{item.adress}}</p>
-                <p>电话：{{item.tel}}</p>
-                <p>传真：{{item.cz}}</p>
-                <p>电子邮件：{{item.mail}}</p>
-              </div>
-            </li>
-          </ul>
-          <ul class="about-member abroad">
-            <li v-for="item in outMenber" :key="item.id">
-              <div class="imgLeft">
-                <img :src="'./../../../static/images/about/example'+item.imgUrl+'.png'">
-              </div>
-              <div class="contentRight">
-                <h3>{{item.title}}</h3>
-                <div>{{item.content}}</div>
-                <p>地址：{{item.adress}}</p>
-                <p>电话：{{item.tel}}</p>
-                <p>传真：{{item.cz}}</p>
-                <p>电子邮件：{{item.mail}}</p>
-              </div>
-            </li>
-          </ul>
-          <common-paging :all="count" @change="handleChange"></common-paging>
+          <div class="tab" @click="handleToggle">
+            <div>国外</div>
+          </div>
         </div>
+        <ul class="about-member domestic">
+          <li v-for="item in inMenber" :key="item.id">
+            <div class="imgLeft">
+              <img :src="'./../../../static/images/about/example'+item.imgUrl+'.png'">
+            </div>
+            <div class="contentRight">
+              <h3>{{item.title}}</h3>
+              <div>{{item.content}}</div>
+              <p>地址：{{item.adress}}</p>
+              <p>电话：{{item.tel}}</p>
+              <p>传真：{{item.cz}}</p>
+              <p>电子邮件：{{item.mail}}</p>
+            </div>
+          </li>
+        </ul>
+        <ul class="about-member abroad">
+          <li v-for="item in outMenber" :key="item.id">
+            <div class="imgLeft">
+              <img :src="'./../../../static/images/about/example'+item.imgUrl+'.png'">
+            </div>
+            <div class="contentRight">
+              <h3>{{item.title}}</h3>
+              <div>{{item.content}}</div>
+              <p>地址：{{item.adress}}</p>
+              <p>电话：{{item.tel}}</p>
+              <p>传真：{{item.cz}}</p>
+              <p>电子邮件：{{item.mail}}</p>
+            </div>
+          </li>
+        </ul>
+        <common-paging :all="count" @change="handleChange"></common-paging>
       </div>
     </div>
-    <common-footer></common-footer>
   </div>
 </template>
 
 <script>
-import './../../assets/style/aboutCommon.scss';
 import './../../assets/style/groupMenber.scss';
-import CommonHeader from './../common/Header';
-import CommonNav from './../common/Nav';
-import AboutBanner from './component/banner';
 import CommonPaging from './../common/paging';
 import LeftNav from './component/leftNav';
-import CommonFooter from './../common/Footer';
 export default {
-  name: 'groupMenber',
+  name: 'aboutGroupMenber',
   components: {
-    CommonHeader,
-    CommonNav,
-    AboutBanner,
     CommonPaging,
-    LeftNav,
-    CommonFooter
+    LeftNav
   },
   data () {
     return {

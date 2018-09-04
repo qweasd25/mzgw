@@ -1,7 +1,7 @@
 <template>
   <header>
     <div>
-      <img src="static/images/index/logo1.png" alt="美中矿业集团">
+      <img src="./../../../static/images/index/logo1.png" alt="美中矿业集团">
     </div>
     <div>
       <form action="/search" class="header-search">

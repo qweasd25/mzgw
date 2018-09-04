@@ -1,56 +1,63 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import VueAwesomeSwiper from 'vue-awesome-swiper';
-import 'swiper/dist/css/swiper.css';
+
+import mzIndex from '@/pages/home/index';
+
+import aboutIndex from '@/pages/about/index';
+import aboutContent from '@/pages/about/about';
+import aboutGroupMenber from '@/pages/about/groupMenber';
+import aboutCulture from '@/pages/about/culture';
+import aboutDevelopHistory from '@/pages/about/developHistory';
+import aboutCooperation from '@/pages/about/cooperation';
 
 Vue.use(Router);
-Vue.use(VueAwesomeSwiper);
 
 export default new Router({
   mode: 'history',
   routes: [
     {
       path: '/index',
-      name: 'mzIndex',
-      component: resolve => require(['@/pages/home/index'], resolve),
+      name: 'index',
+      component: mzIndex,
       meta: {
         title: '首页'
       }
     }, {
-      path: '/about/',
+      path: '/about',
+      component: aboutIndex,
       children: [
         {
           path: 'about',
           name: 'mzAbout',
-          component: resolve => require(['@/pages/about/about'], resolve),
+          component: aboutContent,
           meta: {
             title: '集团简介'
           }
         }, {
           path: 'groupMenber',
           name: 'groupMenber',
-          component: resolve => require(['@/pages/about/groupMenber'], resolve),
+          component: aboutGroupMenber,
           meta: {
             title: '集团成员'
           }
         }, {
           path: 'culture',
           name: 'culture',
-          component: resolve => require(['@/pages/about/culture'], resolve),
+          component: aboutCulture,
           meta: {
             title: '企业文化'
           }
         }, {
           path: 'developHistory',
           name: 'developHistory',
-          component: resolve => require(['@/pages/about/developHistory'], resolve),
+          component: aboutDevelopHistory,
           meta: {
             title: '发展历程'
           }
         }, {
           path: 'cooperation',
           name: 'cooperation',
-          component: resolve => require(['@/pages/about/cooperation'], resolve),
+          component: aboutCooperation,
           meta: {
             title: '战略合作'
           }

@@ -1,19 +1,19 @@
 <template>
   <ul class="left-nav">
     <li>
-      <router-link to="/about.html">集团简介</router-link>
+      <router-link to="/about/about">集团简介</router-link>
     </li>
     <li>
-      <router-link to="/about/groupMenber.html">集团成员</router-link>
+      <router-link to="/about/groupMenber">集团成员</router-link>
     </li>
     <li>
-      <router-link to="/about/culture.html">企业文化</router-link>
+      <router-link to="/about/culture">企业文化</router-link>
     </li>
     <li>
-      <router-link to="/about/developHistory.html">发展历程</router-link>
+      <router-link to="/about/developHistory">发展历程</router-link>
     </li>
     <li>
-      <router-link to="/about/cooperation.html">战略合作</router-link>
+      <router-link to="/about/cooperation">战略合作</router-link>
     </li>
   </ul>
 </template>
