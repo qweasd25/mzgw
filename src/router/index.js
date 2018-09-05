@@ -10,6 +10,11 @@ import aboutCulture from '@/pages/about/culture';
 import aboutDevelopHistory from '@/pages/about/developHistory';
 import aboutCooperation from '@/pages/about/cooperation';
 
+import consultCenter from '@/pages/consultCenter/index';
+import active from '@/pages/consultCenter/active';
+import consult from '@/pages/consultCenter/consult';
+import elegant from '@/pages/consultCenter/elegant';
+
 Vue.use(Router);
 
 export default new Router({
@@ -60,6 +65,33 @@ export default new Router({
           component: aboutCooperation,
           meta: {
             title: '战略合作'
+          }
+        }
+      ]
+    }, {
+      path: '/consultCenter',
+      component: consultCenter,
+      children: [
+        {
+          path: 'active',
+          name: 'active',
+          component: active,
+          meta: {
+            title: '企业动态'
+          }
+        }, {
+          path: 'consult',
+          name: 'consult',
+          component: consult,
+          meta: {
+            title: '行业资讯'
+          }
+        }, {
+          path: 'elegant',
+          name: 'elegant',
+          component: elegant,
+          meta: {
+            title: '美中风采'
           }
         }
       ]

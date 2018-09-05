@@ -30,17 +30,17 @@
     </div>
     <div class="mz-nav">
       <div class="nav-header">
-        <router-link to="">资讯中心</router-link>
+        <router-link to="/consultCenter/active">资讯中心</router-link>
       </div>
       <ul id="nav_uploadMenu" class="header-uploadpop">
         <li class="header-uploadpop-item">
-          <router-link to="">企业动态</router-link>
+          <router-link to="/consultCenter/active">企业动态</router-link>
         </li>
         <li class="header-uploadpop-item">
-          <router-link to="">行业资讯</router-link>
+          <router-link to="/consultCenter/consult">行业资讯</router-link>
         </li>
         <li class="header-uploadpop-item">
-          <router-link to="">美中风采</router-link>
+          <router-link to="/consultCenter/elegant">美中风采</router-link>
         </li>
       </ul>
     </div>
