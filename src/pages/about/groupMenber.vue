@@ -140,7 +140,7 @@ export default {
     handleChange: function (step) {
       console.log(step);
       let start = (step - 1) * 5;
-      let end = step * 5 - 1;
+      let end = step * 5;
       if (this.tab2.classList.contains('active') === true) {
         end = end <= this.abroadLength ? end : this.abroadLength;
         console.log(start, end);
@@ -156,53 +156,3 @@ export default {
   }
 };
 </script>
-
-<style lang="scss">
-.page-bar{
-  margin: 70px 0 90px 300px;
-  height: 30px;
-  li:first-child>a {
-    margin-left: 0px;
-  }
-  li {
-    a {
-      text-decoration: none;
-      position: relative;
-      float: left;
-      font-size: 16px;
-      padding: 6px 20px;
-      margin-left: -1px;
-      line-height: 30px;
-      color: #333333;
-      cursor: pointer;
-      border: none;
-      &:hover {
-        color: #718cf1;
-      }
-      &.banclick{
-        cursor:not-allowed;
-        border: none;
-      }
-    }
-    &.active a{
-      color: #718cf1;
-      cursor: default;
-    }
-    span {
-      text-decoration: none;
-      position: relative;
-      float: left;
-      font-size: 16px;
-      padding: 6px 20px;
-    }
-    i {
-      font-style:normal;
-      margin: 0px 4px;
-      font-size: 16px;
-      line-height: 30px;
-      color: #333333;
-      border: none;
-    }
-  }
-}
-</style>

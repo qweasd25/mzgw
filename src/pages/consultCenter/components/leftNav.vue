@@ -19,6 +19,7 @@ export default {
 </script>
 
 <style lang="scss">
+  @import '~style/_setting.scss';
   .left-nav {
     width: 200px;
     height: 284px;
@@ -42,7 +43,7 @@ export default {
         line-height: 46px;
         text-align: center;
         &:hover {
-          background-color: #718cf1;
+          background-color: $bgColor;
         }
       }
     }

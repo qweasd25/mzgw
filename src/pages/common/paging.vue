@@ -76,3 +76,54 @@ export default {
   }
 };
 </script>
+
+<style lang="scss">
+@import '~style/_setting.scss';
+.page-bar{
+  margin: 70px 0 90px 300px;
+  height: 30px;
+  li:first-child>a {
+    margin-left: 0px;
+  }
+  li {
+    a {
+      text-decoration: none;
+      position: relative;
+      float: left;
+      font-size: 16px;
+      padding: 6px 20px;
+      margin-left: -1px;
+      line-height: 30px;
+      color: #333333;
+      cursor: pointer;
+      border: none;
+      &:hover {
+        color: $bgColor;
+      }
+      &.banclick{
+        cursor:not-allowed;
+        border: none;
+      }
+    }
+    &.active a{
+      color: $bgColor;
+      cursor: default;
+    }
+    span {
+      text-decoration: none;
+      position: relative;
+      float: left;
+      font-size: 16px;
+      padding: 6px 20px;
+    }
+    i {
+      font-style:normal;
+      margin: 0px 4px;
+      font-size: 16px;
+      line-height: 30px;
+      color: #333333;
+      border: none;
+    }
+  }
+}
+</style>

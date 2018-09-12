@@ -142,10 +142,11 @@ export default {
 </script>
 
 <style lang="scss">
+  @import '~style/_setting.scss';
   nav {
     width: 100%;
     height: 38px;
-    background-color: #718cf1;
+    background-color: $bgColor;
     .nav-center {
       width: 44.8%;
       min-width: 860px;
@@ -173,7 +174,7 @@ export default {
           }
         }
         .header-uploadpop {
-          background-color: #718cf1;
+          background-color: $bgColor;
           overflow: hidden;
           opacity: 0;
           transition: opacity .8s ease-in-out;

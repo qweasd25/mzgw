@@ -49,6 +49,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+  @import '~style/_setting.scss';
   .right-main {
     font-size: 22px;
     color: #666666;
@@ -59,7 +60,7 @@ export default {
     li {
       width: 250px;
       height: 126px;
-      border: 1px solid #7c97ff;
+      border: 1px solid $primary;
       margin-bottom: 30px;
       &:last-child{
         margin-bottom: 100px;

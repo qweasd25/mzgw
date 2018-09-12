@@ -84,7 +84,8 @@ export default {
       width: 100%;
       height: 500px;
       img {
-        width: 1920px;
+        width: 100%;
+        min-width: 1920px;
         height: 500px;
       }
     }

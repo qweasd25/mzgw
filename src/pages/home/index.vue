@@ -33,6 +33,7 @@ export default {
 </script>
 
 <style lang="scss">
+@import '~style/_setting.scss';
 .title {
   width: 100%;
   margin: 92px auto 60px;
@@ -40,12 +41,12 @@ export default {
     text-align: center;
     font-family: 'Microsoft YaHei Regular Bold';
     font-size: 30px;
-    color: #718cf1;
+    color: $bgColor;
   }
   hr {
     width: 80px;
     height: 5px;
-    background-color: #718cf1;
+    background-color: $bgColor;
     margin: 22px auto 0;
     border: none;
   }

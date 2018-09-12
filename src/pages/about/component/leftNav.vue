@@ -25,6 +25,7 @@ export default {
 </script>
 
 <style lang="scss">
+  @import '~style/_setting.scss';
   .left-nav {
     width: 200px;
     height: 284px;
@@ -32,7 +33,7 @@ export default {
     li {
       width: 200px;
       height: 46px;
-      background-color: #7c97ff;
+      background-color: $primary;
       &:first-child {
         padding-top: 20px;
       }
@@ -48,7 +49,7 @@ export default {
         line-height: 46px;
         text-align: center;
         &:hover {
-          background-color: #718cf1;
+          background-color: $bgColor;
         }
       }
     }
