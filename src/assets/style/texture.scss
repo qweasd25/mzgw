@@ -1,0 +1,52 @@
+@import '~style/_setting.scss';
+.classification {
+  overflow: hidden;
+  margin-bottom: 30px;
+  li {
+    float: left;
+    span {
+      margin-right: 10px;
+      padding: 3px 10px;
+      border: none;
+      font-size: 16px;
+      color: #555555;
+      &.active, &:hover {
+        border: none;
+        background-color: $bgColor;
+        color: #fff;
+        border-radius: 5px;
+      }
+    }
+  }
+}
+.materialsItem {
+  overflow: hidden;
+  li {
+    float: left;
+    width: 280px;
+    height: 280px;
+    background-color: $primary;
+    margin: 0 30px 30px 0;
+    &:nth-child(3n){
+      margin-right: 0px;
+    }
+    a{
+      display: block;
+      width: 280px;
+      height: 280px;
+      img {
+        display: block;
+        width: 260px;
+        height: 200px;
+        margin: 0 auto 10px;
+        padding-top: 10px;
+      }
+      p {
+        font-size: 14px;
+        color: #fff;
+        padding-left: 10px;
+        line-height: 26px;
+      }
+    } 
+  }
+}

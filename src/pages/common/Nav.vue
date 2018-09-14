@@ -74,8 +74,22 @@
     </div>
     <div class="mz-nav">
       <div class="nav-header">
-        <router-link to="">材料中心</router-link>
+        <router-link to="/materialsCenter/texture">材料中心</router-link>
       </div>
+      <ul id="nav_uploadMenu" class="header-uploadpop">
+        <li class="header-uploadpop-item">
+          <router-link to="/materialsCenter/texture">材 质</router-link>
+        </li>
+        <li class="header-uploadpop-item">
+          <router-link to="/materialsCenter/grain">纹 理</router-link>
+        </li>
+        <li class="header-uploadpop-item">
+          <router-link to="/materialsCenter/range">适用范围</router-link>
+        </li>
+        <li class="header-uploadpop-item">
+          <router-link to="/materialsCenter/colourScheme">色 系</router-link>
+        </li>
+      </ul>
     </div>
     <div class="mz-nav">
       <div class="nav-header">

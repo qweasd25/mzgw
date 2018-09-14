@@ -15,6 +15,12 @@ import active from '@/pages/consultCenter/active';
 import consult from '@/pages/consultCenter/consult';
 import elegant from '@/pages/consultCenter/elegant';
 
+import materialsCenter from '@/pages/materialsCenter/index';
+import texture from '@/pages/materialsCenter/texture';
+import grain from '@/pages/materialsCenter/grain';
+import range from '@/pages/materialsCenter/range';
+import colourScheme from '@/pages/materialsCenter/colourScheme';
+
 Vue.use(Router);
 
 export default new Router({
@@ -92,6 +98,40 @@ export default new Router({
           component: elegant,
           meta: {
             title: '美中风采'
+          }
+        }
+      ]
+    }, {
+      path: '/materialsCenter',
+      component: materialsCenter,
+      children: [
+        {
+          path: 'texture',
+          name: 'texture',
+          component: texture,
+          meta: {
+            title: '材质'
+          }
+        }, {
+          path: 'grain',
+          name: 'grain',
+          component: grain,
+          meta: {
+            title: '纹理'
+          }
+        }, {
+          path: 'range',
+          name: 'range',
+          component: range,
+          meta: {
+            title: '适用范围'
+          }
+        }, {
+          path: 'colourScheme',
+          name: 'colourScheme',
+          component: colourScheme,
+          meta: {
+            title: '色系'
           }
         }
       ]
