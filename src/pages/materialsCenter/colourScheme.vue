@@ -26,7 +26,7 @@
         </ul>
         <ul class="materialsItem" v-if="show === 'a'">
           <li v-for="item of newList" :key="item.id">
-            <router-link to="">
+            <router-link :to="{path:'/materialsCenter/materialsDetail',query:{id: item.id}}">
               <img src="./../../../static/images/materialsCenter/materials1.png" alt="">
               <p>石材名称： <span class="materialsName">罗马假日</span></p>
               <p>适用范围： <span class="materialsRange">室内地面</span></p>
@@ -35,7 +35,7 @@
         </ul>
         <ul class="materialsItem" v-else-if="show === 'b'">
           <li v-for="item of newListB" :key="item.id">
-            <router-link to="">
+            <router-link :to="{path:'/materialsCenter/materialsDetail',query:{id: item.id}}">
               <img src="./../../../static/images/materialsCenter/materials1.png" alt="">
               <p>石材名称： <span class="materialsName">罗马假日</span></p>
               <p>适用范围： <span class="materialsRange">室内地面</span></p>
@@ -44,7 +44,7 @@
         </ul>
         <ul class="materialsItem" v-else-if="show === 'c'">
           <li v-for="item of newListC" :key="item.id">
-            <router-link to="">
+            <router-link :to="{path:'/materialsCenter/materialsDetail',query:{id: item.id}}">
               <img src="./../../../static/images/materialsCenter/materials1.png" alt="">
               <p>石材名称： <span class="materialsName">罗马假日</span></p>
               <p>适用范围： <span class="materialsRange">室内地面</span></p>
@@ -53,7 +53,7 @@
         </ul>
         <ul class="materialsItem" v-else>
           <li v-for="item of newListD" :key="item.id">
-            <router-link to="">
+            <router-link :to="{path:'/materialsCenter/materialsDetail',query:{id: item.id}}">
               <img :src="'./../../../static/images/materialsCenter/materials'+item.imgUrl+'.png'" alt="">
               <p>石材名称： <span class="materialsName">{{item.materialsName}}</span></p>
               <p>适用范围： <span class="materialsRange">{{item.materialsRange}}</span></p>

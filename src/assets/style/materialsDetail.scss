@@ -1,0 +1,33 @@
+@import '~style/_setting.scss';
+.datail {
+  width: 900px;
+  overflow: hidden;
+  height: 400px;
+  margin-bottom: 100px;
+  .datailImg {
+    float: left;
+    width: 700px;
+    height: 400px;
+    margin-right: 20px;
+  }
+  .detailContent {
+    float: left;
+    width: 162px;
+    height: 396px;
+    border: 2px solid #a6b6f3;
+    padding-left: 14px;
+    h5 {
+      font-size: 16px;
+      color: #999999;
+      margin-top: 30px;
+      &:first-child {
+        margin-top: 20px;
+      }
+    }
+    p {
+      font-size: 14px;
+      line-height: 24px;
+      color: #999999;
+    }
+  }
+}

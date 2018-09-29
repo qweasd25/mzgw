@@ -52,24 +52,6 @@
         <li class="header-uploadpop-item">
           <router-link to="">石木风情</router-link>
         </li>
-        <li class="header-uploadpop-item">
-          <router-link to="">异形</router-link>
-        </li>
-        <li class="header-uploadpop-item">
-          <router-link to="">高强板</router-link>
-        </li>
-        <li class="header-uploadpop-item">
-          <router-link to="">马赛克</router-link>
-        </li>
-        <li class="header-uploadpop-item">
-          <router-link to="">艺术拼图</router-link>
-        </li>
-        <li class="header-uploadpop-item">
-          <router-link to="">壁炉</router-link>
-        </li>
-        <li class="header-uploadpop-item">
-          <router-link to="">蒂诺</router-link>
-        </li>
       </ul>
     </div>
     <div class="mz-nav">
@@ -119,23 +101,23 @@
     </div>
     <div class="mz-nav">
       <div class="nav-header">
-        <router-link to="">联系我们</router-link>
+        <router-link to="/contactUs/globalWebsite">联系我们</router-link>
       </div>
       <ul id="nav_uploadMenu" class="header-uploadpop">
         <li class="header-uploadpop-item">
-          <router-link to="">全球网点</router-link>
+          <router-link to="/contactUs/globalWebsite">全球网点</router-link>
         </li>
         <li class="header-uploadpop-item">
-          <router-link to="">加工基地</router-link>
+          <router-link to="/contactUs/base">加工基地</router-link>
         </li>
         <li class="header-uploadpop-item">
-          <router-link to="">采购平台</router-link>
+          <router-link to="/contactUs/platform">采购平台</router-link>
         </li>
         <li class="header-uploadpop-item">
-          <router-link to="">人才招聘</router-link>
+          <router-link to="/contactUs/recruit">人才招聘</router-link>
         </li>
         <li class="header-uploadpop-item">
-          <router-link to="">直营网点</router-link>
+          <router-link to="/contactUs/directWebsite">直营网点</router-link>
         </li>
       </ul>
     </div>

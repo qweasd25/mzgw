@@ -6,61 +6,24 @@
         <span>您现在的位置: </span>
         <router-link to="/index">首页</router-link> >
         <router-link to="/materialsCenter/texture">材料中心</router-link> >
-        <router-link to="/materialsCenter/range">适用范围</router-link>
+        <router-link to="/materialsCenter/texture">材 质</router-link>
       </div>
-      <div class="right-title">材料中心</div>
+      <div class="right-title">材料详情</div>
       <div class="right-main">
-        <ul class="classification">
-          <li>
-            <span class="active" @click="changeShowA">全 部</span>
-          </li>
-          <li>
-            <span @click="changeShowB">花岗石</span>
-          </li>
-          <li>
-            <span @click="changeShowC">大理石</span>
-          </li>
-          <li>
-            <span @click="changeShowD">方钠石</span>
-          </li>
-        </ul>
-        <ul class="materialsItem" v-if="show === 'a'">
-          <li v-for="item of newList" :key="item.id">
-            <router-link :to="{path:'/materialsCenter/materialsDetail',query:{id: item.id}}">
-              <img src="./../../../static/images/materialsCenter/materials1.png" alt="">
-              <p>石材名称： <span class="materialsName">罗马假日</span></p>
-              <p>适用范围： <span class="materialsRange">室内地面</span></p>
-            </router-link>
-          </li>
-        </ul>
-        <ul class="materialsItem" v-else-if="show === 'b'">
-          <li v-for="item of newListB" :key="item.id">
-            <router-link :to="{path:'/materialsCenter/materialsDetail',query:{id: item.id}}">
-              <img src="./../../../static/images/materialsCenter/materials1.png" alt="">
-              <p>石材名称： <span class="materialsName">罗马假日</span></p>
-              <p>适用范围： <span class="materialsRange">室内地面</span></p>
-            </router-link>
-          </li>
-        </ul>
-        <ul class="materialsItem" v-else-if="show === 'c'">
-          <li v-for="item of newListC" :key="item.id">
-            <router-link :to="{path:'/materialsCenter/materialsDetail',query:{id: item.id}}">
-              <img src="./../../../static/images/materialsCenter/materials1.png" alt="">
-              <p>石材名称： <span class="materialsName">罗马假日</span></p>
-              <p>适用范围： <span class="materialsRange">室内地面</span></p>
-            </router-link>
-          </li>
-        </ul>
-        <ul class="materialsItem" v-else>
-          <li v-for="item of newListD" :key="item.id">
-            <router-link :to="{path:'/materialsCenter/materialsDetail',query:{id: item.id}}">
-              <img :src="'./../../../static/images/materialsCenter/materials'+item.imgUrl+'.png'" alt="">
-              <p>石材名称： <span class="materialsName">{{item.materialsName}}</span></p>
-              <p>适用范围： <span class="materialsRange">{{item.materialsRange}}</span></p>
-            </router-link>
-          </li>
-        </ul>
-        <common-paging :all="count" @change="handleChange"></common-paging>
+        <div class="datail">
+          <div class="datailImg"><img src="./../../../static/images/materialsCenter/detail.png" alt=""></div>
+          <div class="detailContent">
+            <h5>{{lastMaterials.materialsName}}</h5>
+            <p>中文名：<span class="materialsName">{{lastMaterials.materialsName}}</span></p>
+            <p>材质：<span class="texture">{{lastMaterials.texture}}</span></p>
+            <p>纹理：<span class="grain">{{lastMaterials.grain}}</span></p>
+            <p>色系：<span class="colourScheme">{{lastMaterials.colourScheme}}</span></p>
+            <p>适用范围：<span class="materialsRange">{{lastMaterials.materialsRange}}</span></p>
+            <h5>材料介绍</h5>
+            <p>产地：<span class="originPlace">{{lastMaterials.originPlace}}</span></p>
+            <p>强度：<span class="strong">{{lastMaterials.strong}}</span></p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -69,9 +32,9 @@
 <script>
 import LeftNav from './components/leftNav';
 import CommonPaging from './../common/paging';
-import './../../assets/style/texture.scss';
+import './../../assets/style/materialsDetail.scss';
 export default {
-  name: 'range',
+  name: 'materialsDetail',
   components: {
     LeftNav,
     CommonPaging
@@ -231,72 +194,15 @@ export default {
           strong: '128'
         }
       ],
-      newList: [],
-      newListB: [],
-      newListC: [],
-      newListD: [],
-      count: 0, // 总页数
-      show: 'a'
+      lastMaterials: {},
+      id: 0
     };
   },
   created () {
-    this.count = Math.ceil(this.materialsItem.length / 12); // 总页数
-    this.newList = this.materialsItem.slice(0, 12);
-    this.newListB = this.materialsItemB.slice(0, 12);
-    this.newListC = this.materialsItemC.slice(0, 12);
-    this.newListD = this.materialsItemD.slice(0, 12);
-  },
-  computed: {
-    materialsItemB: function () {
-      return this.materialsItem.filter((item) => {
-        return item.texture === '花岗石';
-      });
-    },
-    materialsItemC: function () {
-      return this.materialsItem.filter((item) => {
-        return item.texture === '大理石';
-      });
-    },
-    materialsItemD: function () {
-      return this.materialsItem.filter((item) => {
-        return item.texture === '方钠石';
-      });
-    }
-  },
-  methods: {
-    changeShowA: function () {
-      this.show = 'a';
-      this.count = Math.ceil(this.materialsItem.length / 12); // 总页数
-    },
-    changeShowB: function () {
-      this.show = 'b';
-      this.count = Math.ceil(this.materialsItemB.length / 12); // 总页数
-    },
-    changeShowC: function () {
-      this.show = 'c';
-      this.count = Math.ceil(this.materialsItemC.length / 12); // 总页数
-    },
-    changeShowD: function () {
-      this.show = 'd';
-      this.count = Math.ceil(this.materialsItemD.length / 12); // 总页数
-    },
-    handleChange: function (step) {
-      console.log(step);
-      let start = (step - 1) * 12;
-      let end = step * 12;
-      console.log(start, end);
-      if (this.show === 'a') {
-        this.newList = this.materialsItem.slice(start, end);
-        console.log(this.newList);
-      } else if (this.show === 'b') {
-        this.newListB = this.materialsItemB.slice(start, end);
-        console.log(this.newList);
-      } else if (this.show === 'b') {
-        this.newListC = this.materialsItemC.slice(start, end);
-        console.log(this.newList);
-      } else {
-        this.newListD = this.materialsItemD.slice(start, end);
-        console.log(this.newList);
+    this.id = this.$route.query.id;
+    for (let i = 0; i < this.materialsItem.length; i++) {
+      if (this.materialsItem[i].id === this.id) {
+        this.lastMaterials = this.materialsItem[i];
       }
     }
   }

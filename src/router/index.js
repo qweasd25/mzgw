@@ -20,6 +20,14 @@ import texture from '@/pages/materialsCenter/texture';
 import grain from '@/pages/materialsCenter/grain';
 import range from '@/pages/materialsCenter/range';
 import colourScheme from '@/pages/materialsCenter/colourScheme';
+import materialsDetail from '@/pages/materialsCenter/materialsDetail';
+
+import contactUs from '@/pages/contactUs/index';
+import globalWebsite from '@/pages/contactUs/globalWebsite';
+import base from '@/pages/contactUs/base';
+import platform from '@/pages/contactUs/platform';
+import recruit from '@/pages/contactUs/recruit';
+import directWebsite from '@/pages/contactUs/directWebsite';
 
 Vue.use(Router);
 
@@ -132,6 +140,54 @@ export default new Router({
           component: colourScheme,
           meta: {
             title: '色系'
+          }
+        }, {
+          path: 'materialsDetail',
+          name: 'materialsDetail',
+          component: materialsDetail,
+          meta: {
+            title: '材料详情'
+          }
+        }
+      ]
+    }, {
+      path: '/contactUs',
+      component: contactUs,
+      children: [
+        {
+          path: 'globalWebsite',
+          name: 'globalWebsite',
+          component: globalWebsite,
+          meta: {
+            title: '全球网点'
+          }
+        }, {
+          path: 'base',
+          name: 'base',
+          component: base,
+          meta: {
+            title: '加工基地'
+          }
+        }, {
+          path: 'platform',
+          name: 'platform',
+          component: platform,
+          meta: {
+            title: '采购平台'
+          }
+        }, {
+          path: 'recruit',
+          name: 'recruit',
+          component: recruit,
+          meta: {
+            title: '人才招聘'
+          }
+        }, {
+          path: 'directWebsite',
+          name: 'directWebsite',
+          component: directWebsite,
+          meta: {
+            title: '直营网点'
           }
         }
       ]
