@@ -15,6 +15,16 @@ import active from '@/pages/consultCenter/active';
 import consult from '@/pages/consultCenter/consult';
 import elegant from '@/pages/consultCenter/elegant';
 
+import productCenter from '@/pages/productCenter/index';
+import productCenterMain from '@/pages/productCenter/productCenterMain';
+import productCenter1 from '@/pages/productCenter/productCenter1';
+import productCenter2 from '@/pages/productCenter/productCenter2';
+import productCenter3 from '@/pages/productCenter/productCenter3';
+import productCenter4 from '@/pages/productCenter/productCenter4';
+import productCenter5 from '@/pages/productCenter/productCenter5';
+import productCenter6 from '@/pages/productCenter/productCenter6';
+import productCenter7 from '@/pages/productCenter/productCenter7';
+
 import materialsCenter from '@/pages/materialsCenter/index';
 import texture from '@/pages/materialsCenter/texture';
 import grain from '@/pages/materialsCenter/grain';
@@ -106,6 +116,68 @@ export default new Router({
           component: elegant,
           meta: {
             title: '美中风采'
+          }
+        }
+      ]
+    }, {
+      path: '/productCenter',
+      component: productCenter,
+      children: [
+        {
+          path: 'productCenterMain',
+          name: 'productCenterMain',
+          component: productCenterMain,
+          meta: {
+            title: '产品中心'
+          }
+        }, {
+          path: 'productCenter1',
+          name: 'productCenter1',
+          component: productCenter1,
+          meta: {
+            title: '石木风情'
+          }
+        }, {
+          path: 'productCenter2',
+          name: 'productCenter2',
+          component: productCenter2,
+          meta: {
+            title: '异形'
+          }
+        }, {
+          path: 'productCenter3',
+          name: 'productCenter3',
+          component: productCenter3,
+          meta: {
+            title: '高强板'
+          }
+        }, {
+          path: 'productCenter4',
+          name: 'productCenter4',
+          component: productCenter4,
+          meta: {
+            title: '马赛克'
+          }
+        }, {
+          path: 'productCenter5',
+          name: 'productCenter5',
+          component: productCenter5,
+          meta: {
+            title: '艺术拼图'
+          }
+        }, {
+          path: 'productCenter6',
+          name: 'productCenter6',
+          component: productCenter6,
+          meta: {
+            title: '壁炉'
+          }
+        }, {
+          path: 'productCenter7',
+          name: 'productCenter7',
+          component: productCenter7,
+          meta: {
+            title: '蒂诺'
           }
         }
       ]

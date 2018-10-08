@@ -1,16 +1,25 @@
 <template>
   <ul class="left-nav">
     <li>
-      <router-link to="/materialsCenter/texture">材质</router-link>
+      <router-link to="/productCenter/productCenter1">石木风情</router-link>
     </li>
     <li>
-      <router-link to="/materialsCenter/grain">纹理</router-link>
+      <router-link to="/productCenter/productCenter2">异 形</router-link>
     </li>
     <li>
-      <router-link to="/materialsCenter/range">适用范围</router-link>
+      <router-link to="/productCenter/productCenter3">高强板</router-link>
     </li>
     <li>
-      <router-link to="/materialsCenter/colourScheme">色系</router-link>
+      <router-link to="/productCenter/productCenter4">马赛克</router-link>
+    </li>
+    <li>
+      <router-link to="/productCenter/productCenter5">艺术拼图</router-link>
+    </li>
+    <li>
+      <router-link to="/productCenter/productCenter6">壁 炉</router-link>
+    </li>
+    <li>
+      <router-link to="/productCenter/productCenter7">蒂 诺</router-link>
     </li>
   </ul>
 </template>

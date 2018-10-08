@@ -46,11 +46,29 @@
     </div>
     <div class="mz-nav">
       <div class="nav-header">
-        <router-link to="">产品中心</router-link>
+        <router-link to="/productCenter/productCenterMain">产品中心</router-link>
       </div>
       <ul id="nav_uploadMenu" class="header-uploadpop">
         <li class="header-uploadpop-item">
-          <router-link to="">石木风情</router-link>
+          <router-link to="/productCenter/productCenter1">石木风情</router-link>
+        </li>
+        <li class="header-uploadpop-item">
+          <router-link to="">异 形</router-link>
+        </li>
+        <li class="header-uploadpop-item">
+          <router-link to="">高强板</router-link>
+        </li>
+        <li class="header-uploadpop-item">
+          <router-link to="">马赛克</router-link>
+        </li>
+        <li class="header-uploadpop-item">
+          <router-link to="">艺术拼图</router-link>
+        </li>
+        <li class="header-uploadpop-item">
+          <router-link to="">壁 炉</router-link>
+        </li>
+        <li class="header-uploadpop-item">
+          <router-link to="">蒂 诺</router-link>
         </li>
       </ul>
     </div>
