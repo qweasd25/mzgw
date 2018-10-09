@@ -75,7 +75,7 @@
       </section>
       <section>
         <div class="left img-content">
-          <router-link to="/productCenter/productCenter7">
+          <router-link to="/productCenter/productCenter">
             <img src="./../../../static/images/productCenter/7.png" alt="蒂诺">
             <span>蒂 诺</span>
           </router-link>

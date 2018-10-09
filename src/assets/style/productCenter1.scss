@@ -1,0 +1,31 @@
+.productItem {
+  overflow: hidden;
+  li {
+    float: left;
+    width:420px;
+    height: 290px;
+    background: #96acff;
+    margin-bottom: 30px;
+    &:nth-child(2n){
+      margin-left: 60px;
+    }
+    a {
+      display: block;
+      width: 390px;
+      height: 220px;
+      margin: 0 auto;
+      padding-top: 15px;
+      img {
+        display: block;
+        width: 390px;
+        height: 220px;
+        margin-bottom: 5px;  
+      }
+      p {
+        color: #fff;
+        font-size: 14px;
+        line-height: 24px;
+      }
+    }
+  }
+}
