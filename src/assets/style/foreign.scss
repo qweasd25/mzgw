@@ -1,0 +1,84 @@
+@import '~style/_setting.scss';
+.foreign {
+  font-size: 22px;
+  color: #666666;
+  overflow: hidden;
+  margin-top: 50px;
+  margin-bottom: 100px;
+  .map {
+    position: relative;
+    margin: 0 auto;
+    width: 817px;
+    height: 428px;
+    background: url('./../../../static/images/mineResources/worldmap.png') no-repeat;
+    background-size: 817px 428px;
+    z-index: -99;
+    .NorthAmerica {
+      display: block;
+      position: absolute;
+      top: 28px;
+      left: 0;
+      width: 253px;
+      height: 211px;
+      background: url('./../../../static/images/mineResources/NorthAmerica.png') no-repeat;
+      background-size: 253px 211px;
+      z-index: 1;
+    }
+    .Europe {
+      display: block;
+      position: absolute;
+      top: 27px;
+      left: 347px;
+      width: 189px;
+      height: 122px;
+      background: url('./../../../static/images/mineResources/Europe.png') no-repeat;
+      background-size: 189px 122px;
+      z-index: 1;
+    }
+    .Africa {
+      display: block;
+      position: absolute;
+      top: 135px;
+      left: 321px;
+      width: 210px;
+      height: 239px;
+      background: url('./../../../static/images/mineResources/Africa.png') no-repeat;
+      background-size: 210px 239px;
+      z-index: 1;
+    }
+    .Asian {
+      display: block;
+      position: absolute;
+      top: 17px;
+      left: 518px;
+      width: 284px;
+      height: 220px;
+      background: url('./../../../static/images/mineResources/Asian.png') no-repeat;
+      background-size: 284px 220px;
+      z-index: 1;
+    }
+  }
+  .img {
+    margin-top: 150px;
+    width: 860px;
+    height: 126px;
+    overflow: hidden;
+    li {
+      float: left;
+      margin-left: 20px;
+      &:first-child {
+        margin-left: 0px;
+      }
+      a {
+        display: block;  
+        width: 200px;
+        height: 126px;
+        img {
+          display: block;
+          width: 200px;
+          height: 126px;
+        }
+      }
+    }
+  }
+}

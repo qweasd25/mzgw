@@ -32,6 +32,10 @@ import range from '@/pages/materialsCenter/range';
 import colourScheme from '@/pages/materialsCenter/colourScheme';
 import materialsDetail from '@/pages/materialsCenter/materialsDetail';
 
+import mineResources from '@/pages/mineResources/index';
+import inland from '@/pages/mineResources/inland';
+import foreign from '@/pages/mineResources/foreign';
+
 import contactUs from '@/pages/contactUs/index';
 import globalWebsite from '@/pages/contactUs/globalWebsite';
 import base from '@/pages/contactUs/base';
@@ -219,6 +223,26 @@ export default new Router({
           component: materialsDetail,
           meta: {
             title: '材料详情'
+          }
+        }
+      ]
+    }, {
+      path: '/mineResources',
+      component: mineResources,
+      children: [
+        {
+          path: 'inland',
+          name: 'inland',
+          component: inland,
+          meta: {
+            title: '国内矿山'
+          }
+        }, {
+          path: 'foreign',
+          name: 'foreign',
+          component: foreign,
+          meta: {
+            title: '国外矿山'
           }
         }
       ]
