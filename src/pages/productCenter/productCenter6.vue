@@ -83,7 +83,7 @@ import './../../assets/style/productCenter1.scss';
 import LeftNav from './components/leftNav';
 import CommonPaging from './../common/paging';
 export default {
-  name: 'productCenter1',
+  name: 'productCenter6',
   components: {
     LeftNav,
     CommonPaging
