@@ -30,13 +30,40 @@
               <img src="./../../../static/images/contactUs/active1.png">
             </div>
             <div class="img-content">
-              <p class="title">高时（厦门）石业有限公司</p>
+              <p class="name">高时（厦门）石业有限公司</p>
               <p class="content">厦门高时是中国最大的花岗岩加工基地</p>
               <router-link to="">查看详情</router-link>
             </div>
           </div>
-          <ul class="other-site">
+          <ul class="other-site" v-if="show === 'a'">
             <li v-for="list of newList" :key="list.id">
+              <img :src="'./../../../static/images/contactUs/'+list.imgUrl+'.png'" alt="">
+              <div class="other-site-content">
+                <p class="other-title">{{list.name}}</p>
+                <router-link to="">查看详情</router-link>
+              </div>
+            </li>
+          </ul>
+          <ul class="other-site" v-else-if="show === 'b'">
+            <li v-for="list of newListB" :key="list.id">
+              <img :src="'./../../../static/images/contactUs/'+list.imgUrl+'.png'" alt="">
+              <div class="other-site-content">
+                <p class="other-title">{{list.name}}</p>
+                <router-link to="">查看详情</router-link>
+              </div>
+            </li>
+          </ul>
+          <ul class="other-site" v-else-if="show === 'c'">
+            <li v-for="list of newListC" :key="list.id">
+              <img :src="'./../../../static/images/contactUs/'+list.imgUrl+'.png'" alt="">
+              <div class="other-site-content">
+                <p class="other-title">{{list.name}}</p>
+                <router-link to="">查看详情</router-link>
+              </div>
+            </li>
+          </ul>
+          <ul class="other-site" v-else>
+            <li v-for="list of newListD" :key="list.id">
               <img :src="'./../../../static/images/contactUs/'+list.imgUrl+'.png'" alt="">
               <div class="other-site-content">
                 <p class="other-title">{{list.name}}</p>
@@ -113,25 +140,71 @@ export default {
       ],
       count: 0,
       newList: [],
-      activeLength: 0
+      newListB: [],
+      newListC: [],
+      newListD: [],
+      show: 'a'
     };
+  },
+  computed: {
+    activeListB: function () {
+      return this.activeList.filter((item) => {
+        return item.belongTo === '福建省';
+      });
+    },
+    activeListC: function () {
+      return this.activeList.filter((item) => {
+        return item.belongTo === '广东省';
+      });
+    },
+    activeListD: function () {
+      return this.activeList.filter((item) => {
+        return item.belongTo === '上海';
+      });
+    }
   },
   created () {
     this.count = Math.ceil(this.activeList.length / 6); // 总页数
     this.newList = this.activeList.slice(0, 6); // 获取第一页数据
-    console.log(this.newList);
-  },
-  mounted () {
-    this.activeLength = this.activeList.length;
+    this.newListB = this.activeListB.slice(0, 6);
+    this.newListC = this.activeListC.slice(0, 6);
+    this.newListD = this.activeListD.slice(0, 6);
   },
   methods: {
+    changeShowA: function () {
+      this.show = 'a';
+      this.count = Math.ceil(this.activeList.length / 6); // 总页数
+    },
+    changeShowB: function () {
+      this.show = 'b';
+      this.count = Math.ceil(this.activeListB.length / 6); // 总页数
+    },
+    changeShowC: function () {
+      this.show = 'c';
+      this.count = Math.ceil(this.activeListC.length / 6); // 总页数
+    },
+    changeShowD: function () {
+      this.show = 'd';
+      this.count = Math.ceil(this.activeListD.length / 6); // 总页数
+    },
     handleChange: function (step) {
       console.log(step);
       let start = (step - 1) * 6;
       let end = step * 6;
       console.log(start, end);
-      this.newList = this.activeList.slice(start, end);
-      console.log(this.newList);
+      if (this.show === 'a') {
+        this.newList = this.activeList.slice(start, end);
+        console.log(this.newList);
+      } else if (this.show === 'b') {
+        this.newListB = this.activeListB.slice(start, end);
+        console.log(this.newList);
+      } else if (this.show === 'b') {
+        this.newListC = this.activeListC.slice(start, end);
+        console.log(this.newList);
+      } else {
+        this.newListD = this.activeListD.slice(start, end);
+        console.log(this.newList);
+      }
     }
   }
 };

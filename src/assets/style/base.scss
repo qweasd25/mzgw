@@ -1,0 +1,29 @@
+@import '~style/_setting.scss';
+.base-items {
+  li {
+    width: 865px;
+    overflow: hidden;
+    margin-bottom: 30px;
+    img {
+      float: left;
+      width: 300px;
+      height: 200px;
+    }
+    .base-item-content {
+      float: left;
+      margin-left: 50px;
+      width: 515px;
+      height: 200px;
+      .other-title {
+        line-height: 30px;;
+        font-size: 18px;
+        color: #333;
+      }
+      p {
+        font-size: 14px;
+        line-height: 21px;;
+        color: #777;
+      }
+    }
+  }
+}
