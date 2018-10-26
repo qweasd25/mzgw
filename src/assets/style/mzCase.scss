@@ -1,0 +1,43 @@
+.box-main {
+  overflow: hidden;
+  font-size: 0;
+}
+.box-1 {
+  width: 600px;
+  float: left;
+}
+.img-box {
+  display: inline-block;
+  vertical-align: bottom;
+  position: relative;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  &:hover {
+    span {
+      display: block;
+    }
+  }
+  img {
+    display: block;
+  }
+  span {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: none;
+    height: 30px;
+    width: 290px;
+    text-align: center;
+    color: #fff;
+    font-size: 16px;
+    line-height: 30px;
+    background: rgba(0, 0, 0, .5);
+  }
+}
+.box-2 {
+  float: right;
+  width: 300px;
+  .img-box {
+    margin-right: 0;
+  }
+}

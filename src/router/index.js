@@ -32,6 +32,10 @@ import range from '@/pages/materialsCenter/range';
 import colourScheme from '@/pages/materialsCenter/colourScheme';
 import materialsDetail from '@/pages/materialsCenter/materialsDetail';
 
+import projectCase from '@/pages/projectCase/index';
+import mzCase from '@/pages/projectCase/mzCase';
+import caseMemoir from '@/pages/projectCase/caseMemoir';
+
 import mineResources from '@/pages/mineResources/index';
 import inland from '@/pages/mineResources/inland';
 import foreign from '@/pages/mineResources/foreign';
@@ -223,6 +227,26 @@ export default new Router({
           component: materialsDetail,
           meta: {
             title: '材料详情'
+          }
+        }
+      ]
+    }, {
+      path: '/projectCase',
+      component: projectCase,
+      children: [
+        {
+          path: 'mzCase',
+          name: 'mzCase',
+          component: mzCase,
+          meta: {
+            title: '美中案例'
+          }
+        }, {
+          path: 'caseMemoir',
+          name: 'caseMemoir',
+          component: caseMemoir,
+          meta: {
+            title: '案例实录'
           }
         }
       ]

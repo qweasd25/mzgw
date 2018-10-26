@@ -1,0 +1,45 @@
+.dire-main {
+  margin-top: 28px;
+  .dire-items-main {
+    overflow: hidden;
+    .dire-items {
+      float: left;
+      &>li {
+        width: 276px;
+        border: 2px solid #7c97ff;
+        margin-right: 20px;
+        margin-bottom: 30px;
+        &:nth-child(3n){
+          margin-right: 0;
+        }
+        .dire-item-title {
+          font-size: 18px;
+          line-height: 30px;
+          color: #666;
+          text-align: center;
+          padding-bottom: 14px;
+          &:first-child {
+            padding-top: 32px;
+            padding-bottom: 0;
+          }
+        }
+        .dire-item-content {
+          margin: 0 auto;
+          width: 256px;
+          border-top: 1px solid #ddd;
+          p {
+            font-size: 16px;
+            line-height: 24px;
+            color: #666;
+            &.dire-item-adress {
+              padding-top: 24px;
+            }
+            &.dire-item-tel {
+              padding-bottom: 30px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

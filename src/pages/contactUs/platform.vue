@@ -6,8 +6,8 @@
         <div class="top-adress">
           <span>您现在的位置: </span>
           <router-link to="/index">首页</router-link> >
-          <router-link to="/consultCenter/active">资讯中心</router-link> >
-          <router-link to="/consultCenter/active">企业动态</router-link>
+          <router-link to="/contactUs/globalWebsite">联系我们</router-link> >
+          <router-link to="/contactUs/platform">采购平台</router-link>
         </div>
         <div class="right-title">采购平台</div>
         <div class="right-main">

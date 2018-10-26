@@ -106,14 +106,14 @@
     </div>
     <div class="mz-nav">
       <div class="nav-header">
-        <router-link to="">工程案例</router-link>
+        <router-link to="/projectCase/mzCase">工程案例</router-link>
       </div>
       <ul id="nav_uploadMenu" class="header-uploadpop">
         <li class="header-uploadpop-item">
-          <router-link to="">美中案例</router-link>
+          <router-link to="/projectCase/mzCase">美中案例</router-link>
         </li>
         <li class="header-uploadpop-item">
-          <router-link to="">案例名录</router-link>
+          <router-link to="/projectCase/caseMemoir">案例名录</router-link>
         </li>
       </ul>
     </div>
