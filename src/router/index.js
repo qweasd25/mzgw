@@ -12,6 +12,7 @@ import aboutCooperation from '@/pages/about/cooperation';
 
 import consultCenter from '@/pages/consultCenter/index';
 import active from '@/pages/consultCenter/active';
+import activeDetails from '@/pages/consultCenter/activeDetails';
 import consult from '@/pages/consultCenter/consult';
 import elegant from '@/pages/consultCenter/elegant';
 
@@ -24,6 +25,7 @@ import productCenter4 from '@/pages/productCenter/productCenter4';
 import productCenter5 from '@/pages/productCenter/productCenter5';
 import productCenter6 from '@/pages/productCenter/productCenter6';
 import productCenter7 from '@/pages/productCenter/productCenter7';
+import productDetail from '@/pages/productCenter/productDetail';
 
 import materialsCenter from '@/pages/materialsCenter/index';
 import texture from '@/pages/materialsCenter/texture';
@@ -39,10 +41,11 @@ import caseMemoir from '@/pages/projectCase/caseMemoir';
 import mineResources from '@/pages/mineResources/index';
 import inland from '@/pages/mineResources/inland';
 import foreign from '@/pages/mineResources/foreign';
+import mineDetail from '@/pages/mineResources/mineDetail';
 
 import contactUs from '@/pages/contactUs/index';
 import globalWebsite from '@/pages/contactUs/globalWebsite';
-import base from '@/pages/contactUs/base';
+import processingBase from '@/pages/contactUs/processingBase';
 import platform from '@/pages/contactUs/platform';
 import recruit from '@/pages/contactUs/recruit';
 import directWebsite from '@/pages/contactUs/directWebsite';
@@ -125,6 +128,13 @@ export default new Router({
           meta: {
             title: '美中风采'
           }
+        }, {
+          path: 'activeDetails',
+          name: 'activeDetails',
+          component: activeDetails,
+          meta: {
+            title: '动态详情'
+          }
         }
       ]
     }, {
@@ -137,6 +147,13 @@ export default new Router({
           component: productCenterMain,
           meta: {
             title: '产品中心'
+          }
+        }, {
+          path: 'productDetail',
+          name: 'productDetail',
+          component: productDetail,
+          meta: {
+            title: '产品详情'
           }
         }, {
           path: 'productCenter1',
@@ -268,6 +285,13 @@ export default new Router({
           meta: {
             title: '国外矿山'
           }
+        }, {
+          path: 'mineDetail',
+          name: 'mineDetail',
+          component: mineDetail,
+          meta: {
+            title: '矿山详情'
+          }
         }
       ]
     }, {
@@ -282,9 +306,9 @@ export default new Router({
             title: '全球网点'
           }
         }, {
-          path: 'base',
-          name: 'base',
-          component: base,
+          path: 'processingBase',
+          name: 'processingBase',
+          component: processingBase,
           meta: {
             title: '加工基地'
           }

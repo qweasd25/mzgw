@@ -11,29 +11,29 @@
       <div class="right-title">矿山资源</div>
       <div class="right-main foreign">
         <div class="map">
-          <router-link class="NorthAmerica" :to="{path:'/mineResources/mineDetail',query:{id: 1}}"></router-link>
-          <router-link class="Europe" :to="{path:'/mineResources/mineDetail',query:{id: 2}}"></router-link>
-          <router-link class="Africa" :to="{path:'/mineResources/mineDetail',query:{id: 3}}"></router-link>
-          <router-link class="Asian" :to="{path:'/mineResources/mineDetail',query:{id: 4}}"></router-link>
+          <router-link class="NorthAmerica" :to="{path:'/mineResources/mineDetail',query:{belongTo: 'NorthAmerica'}}"></router-link>
+          <router-link class="Europe" :to="{path:'/mineResources/mineDetail',query:{belongTo: 'Europe'}}"></router-link>
+          <router-link class="Africa" :to="{path:'/mineResources/mineDetail',query:{belongTo: 'Africa'}}"></router-link>
+          <router-link class="Asian" :to="{path:'/mineResources/mineDetail',query:{belongTo: 'Asian'}}"></router-link>
         </div>
         <ul class="img">
           <li>
-            <router-link :to="{path:'/mineResources/mineDetail',query:{id: 1}}">
+            <router-link :to="{path:'/mineResources/mineDetail',query:{id: 4}}">
               <img src="./../../../static/images/mineResources/1.png">
             </router-link>
           </li>
           <li>
-            <router-link :to="{path:'/mineResources/mineDetail',query:{id: 2}}">
+            <router-link :to="{path:'/mineResources/mineDetail',query:{id: 5}}">
               <img src="./../../../static/images/mineResources/2.png">
             </router-link>
           </li>
           <li>
-            <router-link :to="{path:'/mineResources/mineDetail',query:{id: 3}}">
+            <router-link :to="{path:'/mineResources/mineDetail',query:{id: 6}}">
               <img src="./../../../static/images/mineResources/3.png">
             </router-link>
           </li>
           <li>
-            <router-link :to="{path:'/mineResources/mineDetail',query:{id: 4}}">
+            <router-link :to="{path:'/mineResources/mineDetail',query:{id: 7}}">
               <img src="./../../../static/images/mineResources/4.png">
             </router-link>
           </li>

@@ -10,7 +10,7 @@
           <router-link to="/contactUs/base">加工基地</router-link>
         </div>
         <div class="right-title">加工基地</div>
-        <div class="base">
+        <div class="base-content">
           <ul class="base-items">
             <li v-for="list of newList" :key="list.id">
               <img :src="'./../../../static/images/contactUs/base'+list.imgUrl+'.png'" alt="">
@@ -36,7 +36,7 @@ import LeftNav from './components/leftNav';
 import CommonPaging from './../common/paging';
 import './../../assets/style/base.scss';
 export default {
-  name: 'base',
+  name: 'processingBase',
   components: {
     LeftNav,
     CommonPaging

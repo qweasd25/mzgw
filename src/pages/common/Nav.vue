@@ -126,7 +126,7 @@
           <router-link to="/contactUs/globalWebsite">全球网点</router-link>
         </li>
         <li class="header-uploadpop-item">
-          <router-link to="/contactUs/base">加工基地</router-link>
+          <router-link to="/contactUs/processingBase">加工基地</router-link>
         </li>
         <li class="header-uploadpop-item">
           <router-link to="/contactUs/platform">采购平台</router-link>

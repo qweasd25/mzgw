@@ -1,0 +1,33 @@
+.active-detail {
+  width: 900px;
+  h1 {
+    font-size: 26px;
+    color: #666;
+    text-align: center;
+    margin-bottom: 26px;
+  }
+  .article-time {
+    font-size: 16px;
+    color: #666;
+    text-align: center;
+    margin-bottom: 45px;
+  }
+  .article-content {
+    width: 800px;
+    margin: 0 auto;
+    padding:  5px;
+    p {
+      font-size: 16px;
+      color: #666;
+      text-indent: 30px;
+      line-height: 36px;
+    }
+    img {
+      display: block;
+      margin: 20px auto;
+    }
+    .article-img-title {
+      text-align: center;
+    }
+  }
+}

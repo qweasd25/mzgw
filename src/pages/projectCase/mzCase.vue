@@ -17,13 +17,15 @@
           </div>
         </div>
         <div class="box-2">
-          <div class="img-box">
-            <img src="./../../../static/images/projectCase/6.png">
-            <span>XXXXXXX</span>
+          <div class="img-box" v-for="(imgBox2,index) in imgBoxListTwo" :key="index">
+            <img :src="'./../../../static/images/projectCase/'+imgBox2.imgurl+'.png'">
+            <span>{{imgBox2.title}}</span>
           </div>
-          <div class="img-box">
-            <img src="./../../../static/images/projectCase/7.png">
-            <span>XXXXXXX</span>
+        </div>
+        <div class="box-3">
+          <div class="img-box" v-for="(imgBox3,index) in imgBoxListThree" :key="index">
+            <img :src="'./../../../static/images/projectCase/'+imgBox3.imgurl+'.png'">
+            <span>{{imgBox3.title}}</span>
           </div>
         </div>
       </div>
@@ -51,107 +53,133 @@ export default {
       }, {
         id: '0002',
         imgurl: '2',
-        title: 'XXXXXXX'
+        title: 'XXXXXXX',
+        to: ''
       }, {
         id: '0003',
         imgurl: '3',
-        title: 'XXXXXXX'
+        title: 'XXXXXXX',
+        to: ''
       }, {
         id: '0004',
         imgurl: '4',
-        title: 'XXXXXXX'
+        title: 'XXXXXXX',
+        to: ''
       }, {
         id: '0005',
         imgurl: '5',
-        title: 'XXXXXXX'
+        title: 'XXXXXXX',
+        to: ''
       }, {
         id: '0006',
         imgurl: '6',
-        title: 'XXXXXXX'
+        title: 'XXXXXXX',
+        to: ''
       }, {
         id: '0007',
         imgurl: '7',
-        title: 'XXXXXXX'
+        title: 'XXXXXXX',
+        to: ''
       }, {
         id: '0008',
         imgurl: '8',
-        title: 'XXXXXXX'
+        title: 'XXXXXXX',
+        to: ''
       }, {
         id: '0009',
         imgurl: '9',
-        title: 'XXXXXXX'
+        title: 'XXXXXXX',
+        to: ''
       }, {
         id: '0010',
         imgurl: '10',
-        title: 'XXXXXXX'
+        title: 'XXXXXXX',
+        to: ''
       }, {
         id: '0011',
         imgurl: '11',
-        title: 'XXXXXXX'
+        title: 'XXXXXXX',
+        to: ''
       }, {
         id: '0012',
         imgurl: '12',
-        title: 'XXXXXXX'
+        title: 'XXXXXXX',
+        to: ''
       }, {
         id: '0013',
         imgurl: '13',
-        title: 'XXXXXXX'
+        title: 'XXXXXXX',
+        to: ''
       }, {
         id: '0014',
         imgurl: '14',
-        title: 'XXXXXXX'
+        title: 'XXXXXXX',
+        to: ''
       }, {
         id: '0015',
         imgurl: '15',
-        title: 'XXXXXXX'
+        title: 'XXXXXXX',
+        to: ''
       }, {
         id: '0016',
         imgurl: '16',
-        title: 'XXXXXXX'
+        title: 'XXXXXXX',
+        to: ''
       }, {
         id: '0017',
         imgurl: '17',
-        title: 'XXXXXXX'
+        title: 'XXXXXXX',
+        to: ''
       }, {
         id: '0018',
         imgurl: '18',
-        title: 'XXXXXXX'
+        title: 'XXXXXXX',
+        to: ''
       }, {
         id: '0019',
         imgurl: '19',
-        title: 'XXXXXXX'
+        title: 'XXXXXXX',
+        to: ''
       }, {
         id: '0020',
         imgurl: '20',
-        title: 'XXXXXXX'
+        title: 'XXXXXXX',
+        to: ''
       }, {
         id: '0021',
         imgurl: '21',
-        title: 'XXXXXXX'
+        title: 'XXXXXXX',
+        to: ''
       }, {
         id: '0022',
         imgurl: '22',
-        title: 'XXXXXXX'
+        title: 'XXXXXXX',
+        to: ''
       }, {
         id: '0023',
         imgurl: '23',
-        title: 'XXXXXXX'
+        title: 'XXXXXXX',
+        to: ''
       }, {
         id: '0024',
         imgurl: '24',
-        title: 'XXXXXXX'
+        title: 'XXXXXXX',
+        to: ''
       }, {
         id: '0025',
         imgurl: '25',
-        title: 'XXXXXXX'
+        title: 'XXXXXXX',
+        to: ''
       }, {
         id: '0026',
         imgurl: '26',
-        title: 'XXXXXXX'
+        title: 'XXXXXXX',
+        to: ''
       }, {
         id: '0027',
         imgurl: '27',
-        title: 'XXXXXXX'
+        title: 'XXXXXXX',
+        to: ''
       }]
     };
   },
@@ -159,8 +187,21 @@ export default {
     this.imgBoxListOne = this.imgBoxList.filter(
       // 返回数组，filter函数获取满足条件的项
       function (item, index, array) {
-        return (index < 6);
-      });
+        return (index < 5);
+      }
+    );
+    this.imgBoxListTwo = this.imgBoxList.filter(
+      // 返回数组，filter函数获取满足条件的项
+      function (item, index, array) {
+        return (index >= 5 && index < 7);
+      }
+    );
+    this.imgBoxListThree = this.imgBoxList.filter(
+      // 返回数组，filter函数获取满足条件的项
+      function (item, index, array) {
+        return (index >= 7 && index < 27);
+      }
+    );
   }
 };
 </script>

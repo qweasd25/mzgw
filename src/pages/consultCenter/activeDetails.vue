@@ -9,32 +9,11 @@
           <router-link to="/consultCenter/active">资讯中心</router-link> >
           <router-link to="/consultCenter/active">企业动态</router-link>
         </div>
-        <div class="right-title">企业动态</div>
-        <div class="right-main">
-          <div class="top-active" v-for="top of topActive" :key="top.id">
-            <div class="top-image">
-              <img :src="'./../../../static/images/consultCenter/active'+top.topImgUrl+'.png'">
-            </div>
-            <div class="top-image-content">
-              <p class="title">{{top.title}}</p>
-              <p class="content">—— &nbsp;&nbsp;&nbsp;{{top.topContent}}</p>
-              <router-link :to="{path:'/consultCenter/activeDetails',query:{id: top.id}}">阅读更多</router-link>
-            </div>
-          </div>
-          <ul class="other-active">
-            <li v-for="list of newList" :key="list.id">
-              <router-link :to="{path:'/consultCenter/activeDetails',query:{id: list.id}}">
-                <img :src="'./../../../static/images/consultCenter/active'+list.imgUrl+'.png'" alt="">
-                <div class="other-active-content">
-                  <p class="other-title">{{list.title}}</p>
-                  <p class="other-content">{{list.content}}</p>
-                  <span>{{list.time}}</span>
-                </div>
-              </router-link>
-            </li>
-          </ul>
-          <common-paging :all="count" @change="handleChange"></common-paging>
-        </div>
+        <article class="active-detail">
+          <h1>{{articleList[0].title}}</h1>
+          <p class="article-time">发布时间:  {{articleList[0].time}}</p>
+          <div class="article-content" v-html='articleList[0].articleContent'></div>
+        </article>
       </div>
     </div>
   </div>
@@ -43,15 +22,16 @@
 <script>
 import LeftNav from './components/leftNav';
 import CommonPaging from './../common/paging';
-import './../../assets/style/active.scss';
+import './../../assets/style/activeDetails.scss';
 export default {
-  name: 'active',
+  name: 'activeDetails',
   components: {
     LeftNav,
     CommonPaging
   },
   data () {
     return {
+      id: 0,
       activeList: [
         {
           id: '0001',
@@ -106,33 +86,16 @@ export default {
             `
         }
       ],
-      topActive: [],
-      count: 0,
-      newList: [],
-      activeLength: 0
+      articleList: []
     };
   },
   created () {
-    this.count = Math.ceil(this.activeList.length / 6); // 总页数
-    this.newList = this.activeList.slice(0, 6); // 获取第一页数据
-    this.topActive = this.activeList.filter( // 置顶新闻
+    this.id = this.$route.query.id;
+    this.articleList = this.activeList.filter(
       (item) => {
-        return (item.id === '0002');
+        return (item.id === this.id);
       }
     );
-  },
-  mounted () {
-    this.activeLength = this.activeList.length;
-  },
-  methods: {
-    handleChange: function (step) {
-      console.log(step);
-      let start = (step - 1) * 6;
-      let end = step * 6;
-      console.log(start, end);
-      this.newList = this.activeList.slice(start, end);
-      console.log(this.newList);
-    }
   }
 };
 </script>

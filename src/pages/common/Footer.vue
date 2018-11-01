@@ -38,7 +38,7 @@
       <ul>
         <li>联系我们</li>
         <li><router-link to="/contactUs/globalWebsite">全球网点</router-link></li>
-        <li><router-link to="/contactUs/base">加工基地</router-link></li>
+        <li><router-link to="/contactUs/processingBase">加工基地</router-link></li>
         <li><router-link to="/contactUs/platform">采购平台</router-link></li>
         <li><router-link to="/contactUs/recruit">人才招聘</router-link></li>
         <li><router-link to="/contactUs/directWebsite">直营网点</router-link></li>
