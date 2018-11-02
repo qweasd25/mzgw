@@ -32,7 +32,7 @@
             <div class="img-content">
               <p class="name">高时（厦门）石业有限公司</p>
               <p class="content">厦门高时是中国最大的花岗岩加工基地</p>
-              <router-link to="">查看详情</router-link>
+              <router-link :to="{path:'/contactUs/globalWebsiteDetail',query:{id: '0001'}}">查看详情</router-link>
             </div>
           </div>
           <ul class="other-site" v-if="show === 'a'">
@@ -40,7 +40,7 @@
               <img :src="'./../../../static/images/contactUs/'+list.imgUrl+'.png'" alt="">
               <div class="other-site-content">
                 <p class="other-title">{{list.name}}</p>
-                <router-link to="">查看详情</router-link>
+                <router-link :to="{path:'/contactUs/globalWebsiteDetail',query:{id: list.id}}">查看详情</router-link>
               </div>
             </li>
           </ul>
@@ -49,7 +49,7 @@
               <img :src="'./../../../static/images/contactUs/'+list.imgUrl+'.png'" alt="">
               <div class="other-site-content">
                 <p class="other-title">{{list.name}}</p>
-                <router-link to="">查看详情</router-link>
+                <router-link :to="{path:'/contactUs/globalWebsiteDetail',query:{id: list.id}}">查看详情</router-link>
               </div>
             </li>
           </ul>
@@ -58,7 +58,7 @@
               <img :src="'./../../../static/images/contactUs/'+list.imgUrl+'.png'" alt="">
               <div class="other-site-content">
                 <p class="other-title">{{list.name}}</p>
-                <router-link to="">查看详情</router-link>
+                <router-link :to="{path:'/contactUs/globalWebsiteDetail',query:{id: list.id}}">查看详情</router-link>
               </div>
             </li>
           </ul>
@@ -67,7 +67,7 @@
               <img :src="'./../../../static/images/contactUs/'+list.imgUrl+'.png'" alt="">
               <div class="other-site-content">
                 <p class="other-title">{{list.name}}</p>
-                <router-link to="">查看详情</router-link>
+                <router-link :to="{path:'/contactUs/globalWebsiteDetail',query:{id: list.id}}">查看详情</router-link>
               </div>
             </li>
           </ul>

@@ -1,0 +1,32 @@
+.case-detail {
+  width: 900px;
+  img {
+    display: block;
+    width: 680px;
+    height: 380px;
+    margin-bottom: 40px;
+  }
+  .case-content {
+    width: 700px;
+  }
+  h3 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #444;
+    margin-bottom: 8px;
+  }
+  p {
+    font-size: 16px;
+    line-height: 30px;
+    color: #444;
+  }
+  .materials {
+    margin-bottom: 10px;
+  }
+  .introduce {
+    margin-bottom: 100px;
+    &>p {
+      line-height: 24px;
+    }
+  }
+}

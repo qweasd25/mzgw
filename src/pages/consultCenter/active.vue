@@ -117,7 +117,7 @@ export default {
     this.newList = this.activeList.slice(0, 6); // 获取第一页数据
     this.topActive = this.activeList.filter( // 置顶新闻
       (item) => {
-        return (item.id === '0002');
+        return (item.id === '0001');
       }
     );
   },

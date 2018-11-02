@@ -8,25 +8,16 @@
         <router-link to="/projectCase/mzCase">工程案例</router-link> >
         <router-link to="/projectCase/mzCase">美中案例</router-link>
       </div>
-      <div class="right-title">美中案例</div>
-      <div class="box-main">
-        <div class="box-1">
-          <router-link class="img-box" v-for="(imgBox1,index) in imgBoxListOne" :key="index" :to="{path:'/projectCase/mzCaseDetail',query:{id: imgBox1.id}}">
-            <img :src="'./../../../static/images/projectCase/'+imgBox1.imgurl+'.png'">
-            <span>{{imgBox1.title}}</span>
-          </router-link>
-        </div>
-        <div class="box-2">
-          <router-link class="img-box" v-for="(imgBox2,index) in imgBoxListTwo" :key="index" :to="{path:'/projectCase/mzCaseDetail',query:{id: imgBox2.id}}">
-            <img :src="'./../../../static/images/projectCase/'+imgBox2.imgurl+'.png'">
-            <span>{{imgBox2.title}}</span>
-          </router-link>
-        </div>
-        <div class="box-3">
-          <router-link class="img-box" v-for="(imgBox3,index) in imgBoxListThree" :key="index" :to="{path:'/projectCase/mzCaseDetail',query:{id: imgBox3.id}}">
-            <img :src="'./../../../static/images/projectCase/'+imgBox3.imgurl+'.png'">
-            <span>{{imgBox3.title}}</span>
-          </router-link>
+      <div class="right-title">美中案例详情</div>
+      <div class="case-detail">
+        <img :src="'./../../../static/images/projectCase/'+mzCaseDet.imgurl+'.png'">
+        <div class="case-content">
+          <h3>{{mzCaseDet.title}}</h3>
+          <p class="type">工程类别：{{mzCaseDet.type}}</p>
+          <p class="adress">工程地点：{{mzCaseDet.adress}}</p>
+          <p class="materials">工程材料：{{mzCaseDet.materials}}</p>
+          <h3>工程介绍</h3>
+          <div class="introduce" v-html="mzCaseDet.introduce"></div>
         </div>
       </div>
     </div>
@@ -34,18 +25,15 @@
 </template>
 
 <script>
-import './../../assets/style/mzCase.scss';
+import './../../assets/style/mzCaseDetail.scss';
 import LeftNav from './components/leftNav';
 export default {
-  name: 'mzCase',
+  name: 'mzCaseDetail',
   components: {
     LeftNav
   },
   data () {
     return {
-      imgBoxListOne: [],
-      imgBoxListTwo: [],
-      imgBoxListThree: [],
       imgBoxList: [
         {
           id: '0001',
@@ -264,28 +252,19 @@ export default {
           materials: '',
           introduce: '<p>北京长安街W酒店位于北京市朝阳区建国门南大街2号，毗邻东单商圈、国贸商圈和第一使馆区,雄踞北京现代商务及历史文化核心区域。酒店地上21层、地下5层，总建筑面积62805平米，设有E-WOW套房、WOW套房、双床房、大床房等8种房型共353间。</p><p>W酒店是喜达屋旗下的全球现代奢华时尚生活品牌，其官方的定位是“Lifestye”品牌，业内普遍将其归类为大型的Boutique hotel路线。激发灵感、创造潮流、大胆创新的 W 酒店在业界影响深远，为宾客提供终极的入住体验。</p>'
         }
-      ]
+      ],
+      id: 0,
+      mzCaseDet: []
     };
   },
   created () {
-    this.imgBoxListOne = this.imgBoxList.filter(
-      // 返回数组，filter函数获取满足条件的项
-      function (item, index, array) {
-        return (index < 5);
+    this.id = this.$route.query.id;
+    for (let i = 0; i < this.imgBoxList.length; i++) {
+      if (this.imgBoxList[i].id === this.id) {
+        this.mzCaseDet = this.imgBoxList[i];
       }
-    );
-    this.imgBoxListTwo = this.imgBoxList.filter(
-      // 返回数组，filter函数获取满足条件的项
-      function (item, index, array) {
-        return (index >= 5 && index < 7);
-      }
-    );
-    this.imgBoxListThree = this.imgBoxList.filter(
-      // 返回数组，filter函数获取满足条件的项
-      function (item, index, array) {
-        return (index >= 7 && index < 27);
-      }
-    );
+    }
+    console.log(this.detailGlobal);
   }
 };
 </script>

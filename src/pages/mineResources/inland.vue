@@ -11,13 +11,13 @@
       <div class="right-title">矿山资源</div>
       <div class="right-main inland">
         <div class="map left">
-          <router-link class="hebei" :to="{path:'/mineResources/mineDetail',query:{mineName: '河北矿脉'}}"></router-link>
+          <router-link class="hebei" :to="{path:'/mineResources/mineDetail',query:{mineName: '河北矿山'}}"></router-link>
           <router-link class="shandong" :to="{path:'/mineResources/mineDetail',query:{mineName: '山东矿山'}}"></router-link>
           <router-link class="sichuan" :to="{path:'/mineResources/mineDetail',query:{mineName: '四川矿山'}}"></router-link>
         </div>
         <ul class="img right">
           <li>
-            <router-link :to="{path:'/mineResources/mineDetail',query:{mineName: '山东矿脉'}}">
+            <router-link :to="{path:'/mineResources/mineDetail',query:{mineName: '山东矿山'}}">
               <img src="./../../../static/images/mineResources/shandong1.png">
               <p>山东地矿</p>
             </router-link>

@@ -36,6 +36,7 @@ import materialsDetail from '@/pages/materialsCenter/materialsDetail';
 
 import projectCase from '@/pages/projectCase/index';
 import mzCase from '@/pages/projectCase/mzCase';
+import mzCaseDetail from '@/pages/projectCase/mzCaseDetail';
 import caseMemoir from '@/pages/projectCase/caseMemoir';
 
 import mineResources from '@/pages/mineResources/index';
@@ -45,6 +46,7 @@ import mineDetail from '@/pages/mineResources/mineDetail';
 
 import contactUs from '@/pages/contactUs/index';
 import globalWebsite from '@/pages/contactUs/globalWebsite';
+import globalWebsiteDetail from '@/pages/contactUs/globalWebsiteDetail';
 import processingBase from '@/pages/contactUs/processingBase';
 import platform from '@/pages/contactUs/platform';
 import recruit from '@/pages/contactUs/recruit';
@@ -259,6 +261,13 @@ export default new Router({
             title: '美中案例'
           }
         }, {
+          path: 'mzCaseDetail',
+          name: 'mzCaseDetail',
+          component: mzCaseDetail,
+          meta: {
+            title: '美中案例详情'
+          }
+        }, {
           path: 'caseMemoir',
           name: 'caseMemoir',
           component: caseMemoir,
@@ -304,6 +313,13 @@ export default new Router({
           component: globalWebsite,
           meta: {
             title: '全球网点'
+          }
+        }, {
+          path: 'globalWebsiteDetail',
+          name: 'globalWebsiteDetail',
+          component: globalWebsiteDetail,
+          meta: {
+            title: '全球网点详情'
           }
         }, {
           path: 'processingBase',
