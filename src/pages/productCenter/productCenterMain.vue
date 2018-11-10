@@ -3,7 +3,7 @@
     <div class="top-adress">
       <span>您现在的位置: </span>
       <router-link to="/index">首页</router-link> >
-      <router-link to="/consultCenter/active">产品中心</router-link>
+      <router-link to="/productCenter/productCenterMain">产品中心</router-link>
     </div>
     <article>
       <h3>产品中心</h3>

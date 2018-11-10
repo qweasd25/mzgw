@@ -6,7 +6,21 @@
 
 <script>
 export default {
-  name: 'App'
+  name: 'App',
+  metaInfo: {
+    title: '美中矿业官网',
+    meta: [{
+      name: 'keyWords',
+      content: '美中矿业官网'
+    }, {
+      name: 'description',
+      content: '美中矿业官网'
+    }],
+    link: [{
+      rel: 'asstes',
+      href: 'https://assets-cdn.github.com/'
+    }]
+  }
 };
 </script>
 

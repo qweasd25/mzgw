@@ -58,15 +58,15 @@ export default {
         }, {
           id: '0002',
           imgurl: '2',
-          title: '北京W酒店',
-          type: '酒店',
+          title: '中国银行总行大厦',
+          type: '大厦',
           adress: '北京市朝阳区建国门南大街2号',
           materials: '',
           introduce: '<p>北京长安街W酒店位于北京市朝阳区建国门南大街2号，毗邻东单商圈、国贸商圈和第一使馆区,雄踞北京现代商务及历史文化核心区域。酒店地上21层、地下5层，总建筑面积62805平米，设有E-WOW套房、WOW套房、双床房、大床房等8种房型共353间。</p><p>W酒店是喜达屋旗下的全球现代奢华时尚生活品牌，其官方的定位是“Lifestye”品牌，业内普遍将其归类为大型的Boutique hotel路线。激发灵感、创造潮流、大胆创新的 W 酒店在业界影响深远，为宾客提供终极的入住体验。</p>'
         }, {
           id: '0003',
           imgurl: '3',
-          title: '北京W酒店',
+          title: '重庆凯宾斯基酒店',
           type: '酒店',
           adress: '北京市朝阳区建国门南大街2号',
           materials: '',
@@ -74,7 +74,7 @@ export default {
         }, {
           id: '0004',
           imgurl: '4',
-          title: '北京W酒店',
+          title: '广州星河湾酒店',
           type: '酒店',
           adress: '北京市朝阳区建国门南大街2号',
           materials: '',
@@ -82,7 +82,7 @@ export default {
         }, {
           id: '0005',
           imgurl: '5',
-          title: '北京W酒店',
+          title: '亚特兰蒂斯酒店',
           type: '酒店',
           adress: '北京市朝阳区建国门南大街2号',
           materials: '',
@@ -90,7 +90,7 @@ export default {
         }, {
           id: '0006',
           imgurl: '6',
-          title: '北京W酒店',
+          title: '澳门威尼斯人度假村酒店',
           type: '酒店',
           adress: '北京市朝阳区建国门南大街2号',
           materials: '',
@@ -98,7 +98,7 @@ export default {
         }, {
           id: '0007',
           imgurl: '7',
-          title: '北京W酒店',
+          title: '澳门永利酒店',
           type: '酒店',
           adress: '北京市朝阳区建国门南大街2号',
           materials: '',
@@ -106,15 +106,15 @@ export default {
         }, {
           id: '0008',
           imgurl: '8',
-          title: '北京W酒店',
-          type: '酒店',
+          title: '广州歌剧院',
+          type: '歌剧院',
           adress: '北京市朝阳区建国门南大街2号',
           materials: '',
           introduce: '<p>北京长安街W酒店位于北京市朝阳区建国门南大街2号，毗邻东单商圈、国贸商圈和第一使馆区,雄踞北京现代商务及历史文化核心区域。酒店地上21层、地下5层，总建筑面积62805平米，设有E-WOW套房、WOW套房、双床房、大床房等8种房型共353间。</p><p>W酒店是喜达屋旗下的全球现代奢华时尚生活品牌，其官方的定位是“Lifestye”品牌，业内普遍将其归类为大型的Boutique hotel路线。激发灵感、创造潮流、大胆创新的 W 酒店在业界影响深远，为宾客提供终极的入住体验。</p>'
         }, {
           id: '0009',
           imgurl: '9',
-          title: '北京W酒店',
+          title: '三亚美高梅度酒店',
           type: '酒店',
           adress: '北京市朝阳区建国门南大街2号',
           materials: '',
@@ -122,7 +122,7 @@ export default {
         }, {
           id: '0010',
           imgurl: '10',
-          title: '北京W酒店',
+          title: '三亚凤凰岛',
           type: '酒店',
           adress: '北京市朝阳区建国门南大街2号',
           materials: '',
@@ -130,7 +130,7 @@ export default {
         }, {
           id: '0011',
           imgurl: '11',
-          title: '北京W酒店',
+          title: '深圳保利剧院',
           type: '酒店',
           adress: '北京市朝阳区建国门南大街2号',
           materials: '',
@@ -138,7 +138,7 @@ export default {
         }, {
           id: '0012',
           imgurl: '12',
-          title: '北京W酒店',
+          title: '深圳星河丽思卡尔顿酒店',
           type: '酒店',
           adress: '北京市朝阳区建国门南大街2号',
           materials: '',
