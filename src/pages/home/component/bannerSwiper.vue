@@ -103,12 +103,12 @@ export default {
       display: inline-block;
       width: 16px;
       height: 16px;
-      background: url('~/../../static/images/index/bullet_big_white.png') no-repeat center center;
+      background: url('~/static/images/index/bullet_big_white.png') no-repeat center center;
       background-size: 16px 16px;
       margin-left: 10px;
     }
     .banner-bullet-active {
-      background: url('~/../../static/images/index/bullet_big_grey.png') no-repeat center center;
+      background: url('~/static/images/index/bullet_big_grey.png') no-repeat center center;
     }
   }
 </style>
