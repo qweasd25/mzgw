@@ -18,19 +18,19 @@
         <ul class="img right">
           <li>
             <router-link :to="{path:'/mineResources/mineDetail',query:{mineName: '山东矿山'}}">
-              <img src="./../../../static/images/mineResources/shandong1.png">
+              <img src="static/images/mineResources/shandong1.png">
               <p>山东地矿</p>
             </router-link>
           </li>
           <li>
             <router-link :to="{path:'/mineResources/mineDetail',query:{mineName: '河北矿山'}}">
-              <img src="./../../../static/images/mineResources/hebei1.png">
+              <img src="static/images/mineResources/hebei1.png">
               <p>河北地矿</p>
             </router-link>
           </li>
           <li>
             <router-link :to="{path:'/mineResources/mineDetail',query:{mineName: '四川矿山'}}">
-              <img src="./../../../static/images/mineResources/sichuan1.png">
+              <img src="static/images/mineResources/sichuan1.png">
               <p>四川地矿</p>
             </router-link>
           </li>

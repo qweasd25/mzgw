@@ -55,7 +55,7 @@ import directWebsite from '@/pages/contactUs/directWebsite';
 Vue.use(Router);
 
 export default new Router({
-  mode: 'history',
+  // mode: 'history',
   routes: [
     {
       path: '/index',

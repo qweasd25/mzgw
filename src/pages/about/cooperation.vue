@@ -12,7 +12,7 @@
       <ul class="right-main">
         <li v-for="item in cooperationList" :key="item.id">
           <a :href="item.imgUrl">
-            <img :src="'./../../../static/images/about/'+item.imgNum+'.png'" alt="">
+            <img :src="'static/images/about/'+item.imgNum+'.png'" alt="">
           </a>
         </li>
       </ul>

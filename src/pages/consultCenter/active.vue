@@ -13,7 +13,7 @@
         <div class="right-main">
           <div class="top-active" v-for="top of topActive" :key="top.id">
             <div class="top-image">
-              <img :src="'./../../../static/images/consultCenter/active'+top.topImgUrl+'.png'">
+              <img :src="'static/images/consultCenter/active'+top.topImgUrl+'.png'">
             </div>
             <div class="top-image-content">
               <p class="title">{{top.title}}</p>
@@ -24,7 +24,7 @@
           <ul class="other-active">
             <li v-for="list of newList" :key="list.id">
               <router-link :to="{path:'/consultCenter/activeDetails',query:{id: list.id}}">
-                <img :src="'./../../../static/images/consultCenter/active'+list.imgUrl+'.png'" alt="">
+                <img :src="'static/images/consultCenter/active'+list.imgUrl+'.png'" alt="">
                 <div class="other-active-content">
                   <p class="other-title">{{list.title}}</p>
                   <p class="other-content">{{list.content}}</p>

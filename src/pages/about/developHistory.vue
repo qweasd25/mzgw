@@ -17,7 +17,7 @@
           </div>
           <div class="develop-content">
             <div class="develop-img">
-              <img :src="'./../../../static/images/consultCenter/'+list.imgUrl+'.png'">
+              <img :src="'static/images/consultCenter/'+list.imgUrl+'.png'">
             </div>
             <div class="develop-describe">{{list.describe}}</div>
           </div>

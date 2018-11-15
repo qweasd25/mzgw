@@ -19,22 +19,22 @@
         <ul class="img">
           <li>
             <router-link :to="{path:'/mineResources/mineDetail',query:{belongTo: 'NorthAmerica'}}">
-              <img src="./../../../static/images/mineResources/1.png">
+              <img src="static/images/mineResources/1.png">
             </router-link>
           </li>
           <li>
             <router-link :to="{path:'/mineResources/mineDetail',query:{belongTo: 'Europe'}}">
-              <img src="./../../../static/images/mineResources/2.png">
+              <img src="static/images/mineResources/2.png">
             </router-link>
           </li>
           <li>
             <router-link :to="{path:'/mineResources/mineDetail',query:{belongTo: 'Africa'}}">
-              <img src="./../../../static/images/mineResources/3.png">
+              <img src="static/images/mineResources/3.png">
             </router-link>
           </li>
           <li>
             <router-link :to="{path:'/mineResources/mineDetail',query:{belongTo: 'Asian'}}">
-              <img src="./../../../static/images/mineResources/4.png">
+              <img src="static/images/mineResources/4.png">
             </router-link>
           </li>
         </ul>

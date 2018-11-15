@@ -12,19 +12,19 @@
       <div class="box-main">
         <div class="box-1">
           <router-link class="img-box" v-for="(imgBox1,index) in imgBoxListOne" :key="index" :to="{path:'/projectCase/mzCaseDetail',query:{id: imgBox1.id}}">
-            <img :src="'./../../../static/images/projectCase/'+imgBox1.imgurl+'.png'">
+            <img :src="'static/images/projectCase/'+imgBox1.imgurl+'.png'">
             <span>{{imgBox1.title}}</span>
           </router-link>
         </div>
         <div class="box-2">
           <router-link class="img-box" v-for="(imgBox2,index) in imgBoxListTwo" :key="index" :to="{path:'/projectCase/mzCaseDetail',query:{id: imgBox2.id}}">
-            <img :src="'./../../../static/images/projectCase/'+imgBox2.imgurl+'.png'">
+            <img :src="'static/images/projectCase/'+imgBox2.imgurl+'.png'">
             <span>{{imgBox2.title}}</span>
           </router-link>
         </div>
         <div class="box-3">
           <router-link class="img-box" v-for="(imgBox3,index) in imgBoxListThree" :key="index" :to="{path:'/projectCase/mzCaseDetail',query:{id: imgBox3.id}}">
-            <img :src="'./../../../static/images/projectCase/'+imgBox3.imgurl+'.png'">
+            <img :src="'static/images/projectCase/'+imgBox3.imgurl+'.png'">
             <span>{{imgBox3.title}}</span>
           </router-link>
         </div>

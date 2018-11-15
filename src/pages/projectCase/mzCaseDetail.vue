@@ -10,7 +10,7 @@
       </div>
       <div class="right-title">美中案例详情</div>
       <div class="case-detail">
-        <img :src="'./../../../static/images/projectCase/'+mzCaseDet.imgurl+'.png'">
+        <img :src="'static/images/projectCase/'+mzCaseDet.imgurl+'.png'">
         <div class="case-content">
           <h3>{{mzCaseDet.title}}</h3>
           <p class="type">工程类别：{{mzCaseDet.type}}</p>

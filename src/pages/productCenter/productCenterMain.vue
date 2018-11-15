@@ -10,7 +10,7 @@
       <section>
         <div class="left img-content">
           <router-link to="/productCenter/productCenter1">
-            <img src="./../../../static/images/productCenter/1.png" alt="石木风情">
+            <img src="static/images/productCenter/1.png" alt="石木风情">
             <span>石木风情</span>
           </router-link>
         </div>
@@ -21,7 +21,7 @@
       <section>
         <div class="right img-content">
           <router-link to="/productCenter/productCenter2">
-            <img src="./../../../static/images/productCenter/2.png" alt="异形">
+            <img src="static/images/productCenter/2.png" alt="异形">
             <span>异 形</span>
           </router-link>
         </div>
@@ -32,7 +32,7 @@
       <section>
         <div class="left img-content">
           <router-link to="/productCenter/productCenter3">
-            <img src="./../../../static/images/productCenter/3.png" alt="高强板">
+            <img src="static/images/productCenter/3.png" alt="高强板">
             <span>高强板</span>
           </router-link>
         </div>
@@ -43,7 +43,7 @@
       <section>
         <div class="right img-content">
           <router-link to="/productCenter/productCenter4">
-            <img src="./../../../static/images/productCenter/4.png" alt="马赛克">
+            <img src="static/images/productCenter/4.png" alt="马赛克">
             <span>马赛克</span>
           </router-link>
         </div>
@@ -54,7 +54,7 @@
       <section>
         <div class="left img-content">
           <router-link to="/productCenter/productCenter5">
-            <img src="./../../../static/images/productCenter/5.png" alt="艺术拼图">
+            <img src="static/images/productCenter/5.png" alt="艺术拼图">
             <span>艺术拼图</span>
           </router-link>
         </div>
@@ -65,7 +65,7 @@
       <section>
         <div class="right img-content">
           <router-link to="/productCenter/productCenter6">
-            <img src="./../../../static/images/productCenter/6.png" alt="壁炉">
+            <img src="static/images/productCenter/6.png" alt="壁炉">
             <span>壁 炉</span>
           </router-link>
         </div>
@@ -76,7 +76,7 @@
       <section>
         <div class="left img-content">
           <router-link to="/productCenter/productCenter">
-            <img src="./../../../static/images/productCenter/7.png" alt="蒂诺">
+            <img src="static/images/productCenter/7.png" alt="蒂诺">
             <span>蒂 诺</span>
           </router-link>
         </div>

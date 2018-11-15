@@ -30,7 +30,7 @@
         <ul class="productItem" v-if="show === 'a'">
           <li v-for="item of newList" :key="item.id">
             <router-link :to="{path:'/productCenter/productDetail',query:{id: item.id}}">
-              <img :src="'./../../../static/images/productCenter/product'+item.imgUrl+'.png'" alt="">
+              <img :src="'static/images/productCenter/product'+item.imgUrl+'.png'" alt="">
               <p>名称： <span class="productName">{{item.productName}}</span></p>
               <p>规格： <span class="productRange">{{item.specification}}</span></p>
             </router-link>
@@ -39,7 +39,7 @@
         <ul class="productItem" v-else-if="show === 'b'">
           <li v-for="item of newListB" :key="item.id">
             <router-link :to="{path:'/productCenter/productDetail',query:{id: item.id}}">
-              <img :src="'./../../../static/images/productCenter/product'+item.imgUrl+'.png'" alt="">
+              <img :src="'static/images/productCenter/product'+item.imgUrl+'.png'" alt="">
               <p>名称： <span class="productName">{{item.productName}}</span></p>
               <p>规格： <span class="productRange">{{item.specification}}</span></p>
             </router-link>
@@ -48,7 +48,7 @@
         <ul class="productItem" v-else-if="show === 'c'">
           <li v-for="item of newListC" :key="item.id">
             <router-link :to="{path:'/productCenter/productDetail',query:{id: item.id}}">
-              <img :src="'./../../../static/images/productCenter/product'+item.imgUrl+'.png'" alt="">
+              <img :src="'static/images/productCenter/product'+item.imgUrl+'.png'" alt="">
               <p>名称： <span class="productName">{{item.productName}}</span></p>
               <p>规格： <span class="productRange">{{item.specification}}</span></p>
             </router-link>
@@ -57,7 +57,7 @@
         <ul class="productItem" v-else-if="show === 'd'">
           <li v-for="item of newListD" :key="item.id">
             <router-link :to="{path:'/productCenter/productDetail',query:{id: item.id}}">
-              <img :src="'./../../../static/images/productCenter/product'+item.imgUrl+'.png'" alt="">
+              <img :src="'static/images/productCenter/product'+item.imgUrl+'.png'" alt="">
               <p>名称： <span class="productName">{{item.productName}}</span></p>
               <p>规格： <span class="productRange">{{item.specification}}</span></p>
             </router-link>
@@ -66,7 +66,7 @@
         <ul class="productItem" v-else>
           <li v-for="item of newListE" :key="item.id">
             <router-link :to="{path:'/productCenter/productDetail',query:{id: item.id}}">
-              <img :src="'./../../../static/images/productCenter/product'+item.imgUrl+'.png'" alt="">
+              <img :src="'static/images/productCenter/product'+item.imgUrl+'.png'" alt="">
               <p>名称： <span class="productName">{{item.productName}}</span></p>
               <p>规格： <span class="productRange">{{item.specification}}</span></p>
             </router-link>

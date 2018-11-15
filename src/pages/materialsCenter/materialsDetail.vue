@@ -11,7 +11,7 @@
       <div class="right-title">材料详情</div>
       <div class="right-main">
         <div class="datail">
-          <div class="datailImg"><img src="./../../../static/images/materialsCenter/detail.png" alt=""></div>
+          <div class="datailImg"><img src="static/images/materialsCenter/detail.png" alt=""></div>
           <div class="detailContent">
             <h5>{{lastMaterials.materialsName}}</h5>
             <p>中文名：<span class="materialsName">{{lastMaterials.materialsName}}</span></p>

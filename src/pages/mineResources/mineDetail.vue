@@ -14,7 +14,7 @@
         <swiper :options="swiperOptionTop" ref="swiperTop" class="mineDetail gallery-top">
           <!-- slides -->
           <swiper-slide v-for="(mine,index) in lastMine" :key="index">
-            <img :src="'./../../../static/images/mineResources/'+mine.imgUrl+'.png'" alt="">
+            <img :src="'static/images/mineResources/'+mine.imgUrl+'.png'" alt="">
             <div class="type-name">{{mine.typeName}}</div>
             <div class="type-content">{{mine.typeContent}}</div>
           </swiper-slide>
@@ -25,7 +25,7 @@
         </swiper>
         <swiper :options="swiperOptionThumbs" class="gallery-thumbs" ref="swiperThumbs">
           <swiper-slide v-for="(mine,index) in lastMine" :key="index">
-            <img :src="'./../../../static/images/mineResources/'+mine.imgUrl+'.png'" alt="">
+            <img :src="'static/images/mineResources/'+mine.imgUrl+'.png'" alt="">
           </swiper-slide>
         </swiper>
       </div>

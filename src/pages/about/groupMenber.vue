@@ -21,7 +21,7 @@
         <ul class="about-member domestic">
           <li v-for="item in inMenber" :key="item.id">
             <div class="imgLeft">
-              <img :src="'./../../../static/images/about/example'+item.imgUrl+'.png'">
+              <img :src="'static/images/about/example'+item.imgUrl+'.png'">
             </div>
             <div class="contentRight">
               <h3>{{item.title}}</h3>
@@ -36,7 +36,7 @@
         <ul class="about-member abroad">
           <li v-for="item in outMenber" :key="item.id">
             <div class="imgLeft">
-              <img :src="'./../../../static/images/about/example'+item.imgUrl+'.png'">
+              <img :src="'static/images/about/example'+item.imgUrl+'.png'">
             </div>
             <div class="contentRight">
               <h3>{{item.title}}</h3>

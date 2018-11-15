@@ -13,7 +13,7 @@
         <div class="global-website">
           <div class="global-detail">
             <div class="global-bg">
-              <img :src="'./../../../static/images/contactUs/'+detailGlobal.imgUrl+'.png'">
+              <img :src="'static/images/contactUs/'+detailGlobal.imgUrl+'.png'">
             </div>
             <div class="global-content">
               <p class="name">{{detailGlobal.name}}</p>

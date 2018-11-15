@@ -27,7 +27,7 @@
           </ul>
           <div class="top-site">
             <div class="img-bg">
-              <img src="./../../../static/images/contactUs/active1.png">
+              <img src="static/images/contactUs/active1.png">
             </div>
             <div class="img-content">
               <p class="name">高时（厦门）石业有限公司</p>
@@ -37,7 +37,7 @@
           </div>
           <ul class="other-site" v-if="show === 'a'">
             <li v-for="list of newList" :key="list.id">
-              <img :src="'./../../../static/images/contactUs/'+list.imgUrl+'.png'" alt="">
+              <img :src="'static/images/contactUs/'+list.imgUrl+'.png'" alt="">
               <div class="other-site-content">
                 <p class="other-title">{{list.name}}</p>
                 <router-link :to="{path:'/contactUs/globalWebsiteDetail',query:{id: list.id}}">查看详情</router-link>
@@ -46,7 +46,7 @@
           </ul>
           <ul class="other-site" v-else-if="show === 'b'">
             <li v-for="list of newListB" :key="list.id">
-              <img :src="'./../../../static/images/contactUs/'+list.imgUrl+'.png'" alt="">
+              <img :src="'static/images/contactUs/'+list.imgUrl+'.png'" alt="">
               <div class="other-site-content">
                 <p class="other-title">{{list.name}}</p>
                 <router-link :to="{path:'/contactUs/globalWebsiteDetail',query:{id: list.id}}">查看详情</router-link>
@@ -55,7 +55,7 @@
           </ul>
           <ul class="other-site" v-else-if="show === 'c'">
             <li v-for="list of newListC" :key="list.id">
-              <img :src="'./../../../static/images/contactUs/'+list.imgUrl+'.png'" alt="">
+              <img :src="'static/images/contactUs/'+list.imgUrl+'.png'" alt="">
               <div class="other-site-content">
                 <p class="other-title">{{list.name}}</p>
                 <router-link :to="{path:'/contactUs/globalWebsiteDetail',query:{id: list.id}}">查看详情</router-link>
@@ -64,7 +64,7 @@
           </ul>
           <ul class="other-site" v-else>
             <li v-for="list of newListD" :key="list.id">
-              <img :src="'./../../../static/images/contactUs/'+list.imgUrl+'.png'" alt="">
+              <img :src="'static/images/contactUs/'+list.imgUrl+'.png'" alt="">
               <div class="other-site-content">
                 <p class="other-title">{{list.name}}</p>
                 <router-link :to="{path:'/contactUs/globalWebsiteDetail',query:{id: list.id}}">查看详情</router-link>

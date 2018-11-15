@@ -11,7 +11,7 @@
       <div class="right-title">产品详情</div>
       <div class="right-main">
         <div class="productDatail">
-          <div class="datailImg"><img :src="'./../../../static/images/productCenter/product'+lastProduct.imgUrl+'.png'" alt=""></div>
+          <div class="datailImg"><img :src="'static/images/productCenter/product'+lastProduct.imgUrl+'.png'" alt=""></div>
           <div class="detailContent">
             <h3>{{lastProduct.productName}}</h3>
             <p>

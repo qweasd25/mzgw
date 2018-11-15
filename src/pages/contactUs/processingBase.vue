@@ -13,7 +13,7 @@
         <div class="base-content">
           <ul class="base-items">
             <li v-for="list of newList" :key="list.id">
-              <img :src="'./../../../static/images/contactUs/base'+list.imgUrl+'.png'" alt="">
+              <img :src="'static/images/contactUs/base'+list.imgUrl+'.png'" alt="">
               <div class="base-item-content">
                 <p class="other-title">{{list.name}}</p>
                 <p>{{list.content}}</p>
